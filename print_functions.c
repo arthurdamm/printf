@@ -1,6 +1,29 @@
 #include "holberton.h"
 
 /**
+ * convert - itoa implementation
+ * @num: number
+ * @base: base
+ * Return: converted number
+ */
+
+char *convert(unsigned int num, int base)
+{
+	static const char Representation[] = "0123456789ABCDEF";
+	static char buffer[50];
+	char *ptr;
+
+	ptr = &buffer[49];
+	*ptr = '\0';
+	do	{
+		*--ptr = Representation[num % base];
+		num /= base;
+	} while (num != 0);
+
+	return (ptr);
+}
+
+/**
  * print_char - prints character
  * @ap: argument pointer
  *
@@ -19,11 +42,15 @@ int print_char(va_list ap)
  */
 int print_int(va_list ap)
 {
-	char buf[100];
+	int i = va_arg(ap, int);
 
-	buf[99] = 0;
-	sprintf(buf, "%d", va_arg(ap, int));
-	return (_puts(buf));
+	if (i < 0)
+	{
+		_putchar('-');
+		i = -i;
+	}
+
+	return (_puts(convert(i, 10)));
 }
 
 /**
