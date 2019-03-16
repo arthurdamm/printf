@@ -26,6 +26,8 @@ int print_float(va_list ap);
 int print_string(va_list ap);
 int print_percent(va_list ap);
 
+int print_number(int n);
+
 int get_print_func(char *s, va_list ap);
 int _printf(const char *format, ...);
 
