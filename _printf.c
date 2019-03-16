@@ -32,7 +32,7 @@ int get_print_func(char *s, va_list ap)
  * _printf - prints anything
  * @format: the format string
  */
-void _printf(const char *format, ...)
+int _printf(const char *format, ...)
 {
 	int sum = 0;
 	va_list ap;
@@ -52,4 +52,5 @@ void _printf(const char *format, ...)
 	}
 	printf("\n");
 	va_end(ap);
+	return (sum);
 }

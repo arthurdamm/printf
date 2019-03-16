@@ -27,6 +27,6 @@ int print_string(va_list ap);
 int print_percent(va_list ap);
 
 int get_print_func(char *s, va_list ap);
-void _printf(const char *format, ...);
+int _printf(const char *format, ...);
 
 #endif
