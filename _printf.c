@@ -3,6 +3,9 @@
 /**
  * get_print_func - finds the format func
  * @s: the format string
+ * @ap: argument pointer
+ *
+ * Return: the number of bytes printed
  */
 int get_print_func(char *s, va_list ap)
 {
@@ -31,6 +34,8 @@ int get_print_func(char *s, va_list ap)
 /**
  * _printf - prints anything
  * @format: the format string
+ *
+ * Return: number of bytes printed
  */
 int _printf(const char *format, ...)
 {
