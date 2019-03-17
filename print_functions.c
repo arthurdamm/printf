@@ -19,10 +19,6 @@ int print_char(va_list ap)
  */
 int print_int(va_list ap)
 {
-	/* char buf[100]; */
-
-	/* buf[99] = 0; */
-	/* sprintf(buf, "%d", va_arg(ap, int)); */
 	int i = va_arg(ap, int);
 
 	return (print_number(i));
