@@ -46,7 +46,8 @@ int print_string(va_list ap)
  *
  * Return: number chars printed
  */
-int print_percent(void)
+int print_percent(va_list ap)
 {
+	(void)ap;
 	return (_putchar('%'));
 }
