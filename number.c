@@ -26,3 +26,28 @@ int print_number(int n)
 	}
 	return (c);
 }
+
+/**
+ * convert - converter function, a clone of itoa
+ * @num: number
+ * @base: base
+ * @l: lowercase or not
+ * Return: string
+ */
+char *convert(unsigned int num, int base, short l)
+{
+	static char *array;
+	static char buffer[50];
+	char *ptr;
+
+	array = l ? "0123456789abcdef" : "0123456789ABCDEF";
+	ptr = &buffer[49];
+	*ptr = '\0';
+
+	do	{
+		*--ptr = array[num % base];
+		num /= base;
+	} while (num != 0);
+
+	return (ptr);
+}
