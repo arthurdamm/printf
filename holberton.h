@@ -6,6 +6,8 @@
 #include <unistd.h>
 #include <limits.h>
 
+#define FLAGS "+ #"
+
 #define BUF_SIZE 1024
 #define BUF_FLUSH -1
 
@@ -22,6 +24,21 @@ typedef struct specifier
 	char *specifier;
 	int (*f)(va_list);
 } specifier_t;
+
+/**
+ * struct parameters - parameters struct
+ *
+ * @plus_flag: on if plus_flag specified
+ * @space_flag: on if hashtag_flag specified
+ * @hashtag_flag: on if _flag specified
+ */
+typedef struct parameters
+{
+	unsigned int plus_flag		: 1;
+	unsigned int space_flag		: 1;
+	unsigned int hashtag_flag	: 1;
+
+} parameters_t;
 
 /* _put.c module */
 int _puts(char *str);
@@ -42,6 +59,7 @@ int print_address(va_list ap);
 /* specifier.c module */
 int (*get_specifier(char *s))(va_list ap);
 int get_print_func(char *s, va_list ap);
+int get_flag(char *s);
 
 /* convert_number.c module */
 int print_hex(va_list ap);

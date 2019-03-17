@@ -50,3 +50,25 @@ int get_print_func(char *s, va_list ap)
 		return (f(ap));
 	return (0);
 }
+
+/**
+ * get_flag - finds the flag func
+ * @s: the format string
+ *
+ * Return: the number of bytes printed
+ */
+int get_flag(char *s)
+{
+	int i = 0;
+
+	while (FLAGS[i])
+	{
+		if (*s == FLAGS[i])
+		{
+			return (1);
+		}
+		i++;
+	}
+	return (0);
+}
+
