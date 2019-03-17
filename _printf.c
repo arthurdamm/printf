@@ -35,7 +35,6 @@ int _printf(const char *format, ...)
 		else
 			sum += get_print_func(p, ap, &params);
 	}
-	printf("<<%d>>\n", params.hashtag_flag);
 	/* _putchar('\n'); */
 	_putchar(BUF_FLUSH);
 	va_end(ap);
