@@ -30,5 +30,6 @@ int print_number(int n);
 
 int get_print_func(char *s, va_list ap);
 int _printf(const char *format, ...);
+char *convert(unsigned int num, int base, short l);
 
 #endif
