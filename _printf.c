@@ -9,7 +9,7 @@
  */
 int get_print_func(char *s, va_list ap)
 {
-	token_t tokens[] = {
+	specifier_t specifiers[] = {
 		{"c", print_char},
 		{"d", print_int},
 		{"i", print_int},
@@ -23,11 +23,11 @@ int get_print_func(char *s, va_list ap)
 	};
 	int i = 0;
 
-	while (tokens[i].token)
+	while (specifiers[i].specifier)
 	{
-		if (*s == tokens[i].token[0])
+		if (*s == specifiers[i].specifier[0])
 		{
-			return (tokens[i].f(ap));
+			return (specifiers[i].f(ap));
 		}
 		i++;
 	}

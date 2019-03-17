@@ -15,11 +15,11 @@
  * @token: format token
  * @f: The function associated
  */
-typedef struct token
+typedef struct specifier
 {
-	char *token;
+	char *specifier;
 	int (*f)(va_list);
-} token_t;
+} specifier_t;
 
 int _putchar(int c);
 int _puts(char *str);
