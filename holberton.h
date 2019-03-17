@@ -23,24 +23,30 @@ typedef struct specifier
 	int (*f)(va_list);
 } specifier_t;
 
-int _putchar(int c);
+/* _put.c module */
 int _puts(char *str);
+int _putchar(int c);
 
+/* print_functions.c module */
 int print_char(va_list ap);
 int print_int(va_list ap);
 int print_string(va_list ap);
 int print_percent(va_list ap);
 
+/* number.c module */
 int print_number(int n);
+char *convert(unsigned long int num, int base, short l);
+int print_unsigned(va_list ap);
+int print_address(va_list ap);
 
+/* _prinf.c module */
 int get_print_func(char *s, va_list ap);
 int _printf(const char *format, ...);
-char *convert(unsigned long int num, int base, short l);
-int print_octal(va_list ap);
-int print_unsigned(va_list ap);
+
+/* convert_number.c module */
 int print_hex(va_list ap);
 int print_HEX(va_list ap);
 int print_binary(va_list ap);
-int print_address(va_list ap);
+int print_octal(va_list ap);
 
 #endif
