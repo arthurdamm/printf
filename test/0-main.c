@@ -8,6 +8,6 @@
 int main(void)
 {
     printf("%d\n", _printf("Hello %c%d ZY%fZ %s%e WEW", 'H', 321, 3.14, "lberton"));
-    _printf("%%%s%d", NULL, INT_MIN);
+    _printf("%%%s%d%e", NULL, INT_MIN);
     return (0);
 }
