@@ -10,6 +10,7 @@
 int print_from_to(char *start, char *stop)
 {
 	int sum = 0;
+
 	while (start <= stop)
 		sum += _putchar(*start++);
 	return (sum);
