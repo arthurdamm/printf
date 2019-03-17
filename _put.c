@@ -22,7 +22,16 @@ int _puts(char *str)
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char c)
+int _putchar(int c)
 {
-	return (write(1, &c, 1));
+	static int i;
+	static char buf[BUF_SIZE];
+
+	if (c == -1 || i >= BUF_SIZE)
+	{
+		write(1, buf, i);
+		i = 0;
+	}
+	buf[i++] = c;
+	return (1);
 }

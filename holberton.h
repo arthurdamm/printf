@@ -6,6 +6,9 @@
 #include <unistd.h>
 #include <limits.h>
 
+#define BUF_SIZE 1024
+#define BUF_FLUSH -1
+
 /**
  * struct token - Struct token
  *
@@ -18,7 +21,7 @@ typedef struct token
 	int (*f)(va_list);
 } token_t;
 
-int _putchar(char c);
+int _putchar(int c);
 int _puts(char *str);
 
 int print_char(va_list ap);

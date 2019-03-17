@@ -54,7 +54,8 @@ int _printf(const char *format, ...)
 		p++;
 		sum += get_print_func(p, ap);
 	}
-	printf("\n");
+	_putchar('\n');
+	_putchar(BUF_FLUSH);
 	va_end(ap);
 	return (sum);
 }
