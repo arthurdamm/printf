@@ -49,6 +49,7 @@ int print_char(va_list ap);
 int print_int(va_list ap);
 int print_string(va_list ap);
 int print_percent(va_list ap);
+int print_S(va_list ap);
 
 /* number.c module */
 int print_number(int n);

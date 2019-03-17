@@ -20,6 +20,7 @@ int (*get_specifier(char *s))(va_list ap)
 		{"x", print_hex},
 		{"X", print_HEX},
 		{"p", print_address},
+		{"S", print_S},
 		{NULL, NULL}
 	};
 	int i = 0;
