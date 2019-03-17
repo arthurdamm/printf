@@ -27,7 +27,7 @@ int _puts(char *str);
 int print_char(va_list ap);
 int print_int(va_list ap);
 int print_string(va_list ap);
-int print_percent();
+int print_percent(void);
 
 int print_number(int n);
 

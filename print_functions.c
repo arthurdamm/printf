@@ -43,11 +43,10 @@ int print_string(va_list ap)
 
 /**
  * print_percent - prints string
- * @ap: argument pointer
  *
  * Return: number chars printed
  */
-int print_percent()
+int print_percent(void)
 {
 	return (_putchar('%'));
 }
