@@ -11,6 +11,7 @@ int _printf(const char *format, ...)
 	int sum = 0;
 	va_list ap;
 	char *p, *start;
+	params_t params;
 
 	va_start(ap, format);
 
@@ -25,11 +26,16 @@ int _printf(const char *format, ...)
 		}
 		start = p;
 		p++;
+		while (get_flag(p, &params)) /* while char at p is flag char */
+		{
+			p++; /* next char */
+		}
 		if (!get_specifier(p))
 			sum += print_from_to(start, p);
 		else
-			sum += get_print_func(p, ap);
+			sum += get_print_func(p, ap, &params);
 	}
+	printf("<<%d>>\n", params.hashtag_flag);
 	/* _putchar('\n'); */
 	_putchar(BUF_FLUSH);
 	va_end(ap);

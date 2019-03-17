@@ -14,18 +14,6 @@
 #define NULL_STRING "(null)"
 
 /**
- * struct specifier - Struct token
- *
- * @specifier: format token
- * @f: The function associated
- */
-typedef struct specifier
-{
-	char *specifier;
-	int (*f)(va_list);
-} specifier_t;
-
-/**
  * struct parameters - parameters struct
  *
  * @plus_flag: on if plus_flag specified
@@ -38,35 +26,47 @@ typedef struct parameters
 	unsigned int space_flag		: 1;
 	unsigned int hashtag_flag	: 1;
 
-} parameters_t;
+} params_t;
+
+/**
+ * struct specifier - Struct token
+ *
+ * @specifier: format token
+ * @f: The function associated
+ */
+typedef struct specifier
+{
+	char *specifier;
+	int (*f)(va_list, params_t *);
+} specifier_t;
 
 /* _put.c module */
 int _puts(char *str);
 int _putchar(int c);
 
 /* print_functions.c module */
-int print_char(va_list ap);
-int print_int(va_list ap);
-int print_string(va_list ap);
-int print_percent(va_list ap);
-int print_S(va_list ap);
+int print_char(va_list ap, params_t *params);
+int print_int(va_list ap, params_t *params);
+int print_string(va_list ap, params_t *params);
+int print_percent(va_list ap, params_t *params);
+int print_S(va_list ap, params_t *params);
 
 /* number.c module */
 int print_number(int n);
 char *convert(unsigned long int num, int base, short l);
-int print_unsigned(va_list ap);
-int print_address(va_list ap);
+int print_unsigned(va_list ap, params_t *params);
+int print_address(va_list ap, params_t *params);
 
 /* specifier.c module */
-int (*get_specifier(char *s))(va_list ap);
-int get_print_func(char *s, va_list ap);
-int get_flag(char *s);
+int (*get_specifier(char *s))(va_list ap, params_t *params);
+int get_print_func(char *s, va_list ap, params_t *params);
+int get_flag(char *s, params_t *params);
 
 /* convert_number.c module */
-int print_hex(va_list ap);
-int print_HEX(va_list ap);
-int print_binary(va_list ap);
-int print_octal(va_list ap);
+int print_hex(va_list ap, params_t *params);
+int print_HEX(va_list ap, params_t *params);
+int print_binary(va_list ap, params_t *params);
+int print_octal(va_list ap, params_t *params);
 
 /* simple_printers.c module */
 int print_from_to(char *start, char *stop);

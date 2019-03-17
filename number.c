@@ -55,13 +55,15 @@ char *convert(unsigned long int num, int base, short l)
 /**
  * print_unsigned - prints unsigned integer numbers
  * @ap: argument pointer
+ * @params: the parameters struct
  *
  * Return: bytes printed
  */
-int print_unsigned(va_list ap)
+int print_unsigned(va_list ap, params_t *params)
 {
 	unsigned int n = va_arg(ap, unsigned int);
 
+	(void)params;
 	return (_puts(convert(n, 10, 0)));
 }
 
@@ -70,12 +72,14 @@ int print_unsigned(va_list ap)
 /**
  * print_address - prints address
  * @ap: argument pointer
+ * @params: the parameters struct
  *
  * Return: bytes printed
  */
-int print_address(va_list ap)
+int print_address(va_list ap, params_t *params)
 {
 	unsigned long int n = va_arg(ap, unsigned long int);
 
+	(void)params;
 	return (_puts(convert(n, 16, 1)));
 }

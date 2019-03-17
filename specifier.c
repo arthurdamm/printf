@@ -6,7 +6,7 @@
  *
  * Return: the number of bytes printed
  */
-int (*get_specifier(char *s))(va_list ap)
+int (*get_specifier(char *s))(va_list ap, params_t *params)
 {
 	specifier_t specifiers[] = {
 		{"c", print_char},
@@ -40,36 +40,41 @@ int (*get_specifier(char *s))(va_list ap)
  * get_print_func - finds the format func
  * @s: the format string
  * @ap: argument pointer
+ * @params: the parameters struct
  *
  * Return: the number of bytes printed
  */
-int get_print_func(char *s, va_list ap)
+int get_print_func(char *s, va_list ap, params_t *params)
 {
-	int (*f)(va_list) = get_specifier(s);
+	int (*f)(va_list, params_t *) = get_specifier(s);
 
 	if (f)
-		return (f(ap));
+		return (f(ap, params));
 	return (0);
 }
 
 /**
  * get_flag - finds the flag func
  * @s: the format string
+ * @params: the parameters struct
  *
- * Return: the number of bytes printed
+ * Return: if flag was valid
  */
-int get_flag(char *s)
+int get_flag(char *s, params_t *params)
 {
 	int i = 0;
 
-	while (FLAGS[i])
+	switch (*s)
 	{
-		if (*s == FLAGS[i])
-		{
-			return (1);
-		}
-		i++;
+		case '+':
+			i = params->plus_flag = 1;
+			break;
+		case ' ':
+			i = params->space_flag = 1;
+			break;
+		case '#':
+			i = params->hashtag_flag = 1;
+			break;
 	}
-	return (0);
+	return (i);
 }
-

@@ -3,37 +3,43 @@
 /**
  * print_char - prints character
  * @ap: argument pointer
+ * @params: the parameters struct
  *
  * Return: number chars printed
  */
-int print_char(va_list ap)
+int print_char(va_list ap, params_t *params)
 {
+	(void)params;
 	return (_putchar(va_arg(ap, int)));
 }
 
 /**
  * print_int - prints integer
  * @ap: argument pointer
+ * @params: the parameters struct
  *
  * Return: number chars printed
  */
-int print_int(va_list ap)
+int print_int(va_list ap, params_t *params)
 {
 	int i = va_arg(ap, int);
 
+	(void)params;
 	return (print_number(i));
 }
 
 /**
  * print_string - prints string
  * @ap: argument pointer
+ * @params: the parameters struct
  *
  * Return: number chars printed
  */
-int print_string(va_list ap)
+int print_string(va_list ap, params_t *params)
 {
 	char *str = va_arg(ap, char *);
 
+	(void)params;
 	switch ((int)(!str))
 		case 1:
 			str = NULL_STRING;
@@ -44,27 +50,31 @@ int print_string(va_list ap)
 /**
  * print_percent - prints string
  * @ap: argument pointer
+ * @params: the parameters struct
  *
  * Return: number chars printed
  */
-int print_percent(va_list ap)
+int print_percent(va_list ap, params_t *params)
 {
 	(void)ap;
+	(void)params;
 	return (_putchar('%'));
 }
 
 /**
  * print_S - custom format specifier
  * @ap: argument pointer
+ * @params: the parameters struct
  *
  * Return: number chars printed
  */
-int print_S(va_list ap)
+int print_S(va_list ap, params_t *params)
 {
 	char *str = va_arg(ap, char *);
 	char *hex;
 	int sum = 0;
 
+	(void)params;
 	if ((int)(!str))
 		return (_puts(NULL_STRING));
 	for (; *str; str++)
