@@ -12,9 +12,9 @@
 #define NULL_STRING "(null)"
 
 /**
- * struct token - Struct token
+ * struct specifier - Struct token
  *
- * @token: format token
+ * @specifier: format token
  * @f: The function associated
  */
 typedef struct specifier
