@@ -36,7 +36,7 @@ int print_string(va_list ap)
 
 	switch ((int)(!str))
 		case 1:
-			str = "(nil)";
+			str = NULL_STRING;
 
 	return (_puts(str));
 }
