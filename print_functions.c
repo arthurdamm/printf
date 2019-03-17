@@ -29,21 +29,6 @@ int print_int(va_list ap)
 }
 
 /**
- * print_float - prints float
- * @ap: argument pointer
- *
- * Return: number chars printed
- */
-int print_float(va_list ap)
-{
-	char buf[100];
-
-	buf[99] = 0;
-	sprintf(buf, "%f", va_arg(ap, double));
-	return (_puts(buf));
-}
-
-/**
  * print_string - prints string
  * @ap: argument pointer
  *

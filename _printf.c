@@ -13,7 +13,6 @@ int get_print_func(char *s, va_list ap)
 		{"c", print_char},
 		{"d", print_int},
 		{"i", print_int},
-		{"f", print_float},
 		{"s", print_string},
 		{"%", print_percent},
 		{NULL, NULL}

@@ -4,6 +4,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <limits.h>
 
 /**
  * struct token - Struct token
@@ -22,7 +23,6 @@ int _puts(char *str);
 
 int print_char(va_list ap);
 int print_int(va_list ap);
-int print_float(va_list ap);
 int print_string(va_list ap);
 int print_percent(va_list ap);
 
