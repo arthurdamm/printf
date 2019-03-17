@@ -15,10 +15,12 @@ int get_print_func(char *s, va_list ap)
 		{"i", print_int},
 		{"s", print_string},
 		{"%", print_percent},
+		{"b", print_binary},
 		{"o", print_octal},
 		{"u", print_unsigned},
 		{"x", print_hex},
 		{"X", print_HEX},
+		{"p", print_address},
 		{NULL, NULL}
 	};
 	int i = 0;

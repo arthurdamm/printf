@@ -34,7 +34,7 @@ int print_number(int n)
  * @l: lowercase or not
  * Return: string
  */
-char *convert(unsigned int num, int base, short l)
+char *convert(unsigned long int num, int base, short l)
 {
 	static char *array;
 	static char buffer[50];
@@ -102,4 +102,30 @@ int print_HEX(va_list ap)
 	unsigned int n = va_arg(ap, unsigned int);
 
 	return (_puts(convert(n, 16, 0)));
+}
+
+/**
+ * print_binary - prints unsigned binary number
+ * @n: the number
+ *
+ * Return: bytes printed
+ */
+int print_binary(va_list ap)
+{
+	unsigned int n = va_arg(ap, unsigned int);
+
+	return (_puts(convert(n, 2, 0)));
+}
+
+/**
+ * print_address - prints address
+ * @n: the number
+ *
+ * Return: bytes printed
+ */
+int print_address(va_list ap)
+{
+	unsigned long int n = va_arg(ap, unsigned long int);
+
+	return (_puts(convert(n, 16, 1)));
 }
