@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	int sum = 0;
 	va_list ap;
-	char *p;
+	char *p, *start;
 
 	va_start(ap, format);
 
@@ -21,8 +21,12 @@ int _printf(const char *format, ...)
 			sum += _putchar(*p);
 			continue;
 		}
+		start = p;
 		p++;
-		sum += get_print_func(p, ap);
+		if (!get_specifier(p))
+			sum += print_from_to(start, p);
+		else
+			sum += get_print_func(p, ap);
 	}
 	/* _putchar('\n'); */
 	_putchar(BUF_FLUSH);

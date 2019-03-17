@@ -49,6 +49,9 @@ int print_HEX(va_list ap);
 int print_binary(va_list ap);
 int print_octal(va_list ap);
 
+/* simple_printers.c module */
+int print_from_to(char *start, char *stop);
+
 /* _prinf.c module */
 int _printf(const char *format, ...);
 
