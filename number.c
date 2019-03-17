@@ -54,7 +54,7 @@ char *convert(unsigned long int num, int base, short l)
 
 /**
  * print_unsigned - prints unsigned integer numbers
- * @n: the number
+ * @ap: argument pointer
  *
  * Return: bytes printed
  */
@@ -69,7 +69,7 @@ int print_unsigned(va_list ap)
 
 /**
  * print_address - prints address
- * @n: the number
+ * @ap: argument pointer
  *
  * Return: bytes printed
  */

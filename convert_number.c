@@ -2,7 +2,7 @@
 
 /**
  * print_hex - prints unsigned hex numbers in lowercase
- * @n: the number
+ * @ap: the argument pointer
  *
  * Return: bytes printed
  */
@@ -14,8 +14,8 @@ int print_hex(va_list ap)
 }
 
 /**
- * print_hex - prints unsigned hex numbers in uppercase
- * @n: the number
+ * print_HEX - prints unsigned hex numbers in uppercase
+ * @ap: the argument pointer
  *
  * Return: bytes printed
  */
@@ -28,7 +28,7 @@ int print_HEX(va_list ap)
 
 /**
  * print_binary - prints unsigned binary number
- * @n: the number
+ * @ap: the argument pointer
  *
  * Return: bytes printed
  */
@@ -41,7 +41,7 @@ int print_binary(va_list ap)
 
 /**
  * print_octal - prints unsigned octal numbers
- * @n: the number
+ * @ap: the argument pointer
  *
  * Return: bytes printed
  */
