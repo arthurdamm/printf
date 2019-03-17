@@ -40,6 +40,7 @@ int print_unsigned(va_list ap);
 int print_address(va_list ap);
 
 /* specifier.c module */
+int (*get_specifier(char *s))(va_list ap);
 int get_print_func(char *s, va_list ap);
 
 /* convert_number.c module */
