@@ -30,6 +30,8 @@ int _printf(const char *format, ...)
 		{
 			p++; /* next char */
 		}
+		if (get_modifier(p, &params))
+			p++;
 		if (!get_specifier(p))
 			sum += print_from_to(start, p);
 		else
