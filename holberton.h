@@ -26,6 +26,8 @@ typedef struct parameters
 	unsigned int plus_flag		: 1;
 	unsigned int space_flag		: 1;
 	unsigned int hashtag_flag	: 1;
+	unsigned int h_modifier  	: 1;
+	unsigned int l_modifier 	: 1;
 
 } params_t;
 
