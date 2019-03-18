@@ -10,9 +10,11 @@
 int print_hex(va_list ap, params_t *params)
 {
 	unsigned int n = va_arg(ap, unsigned int);
+	char *str = convert(n, 16, 1);
 
-	(void)params;
-	return (_puts(convert(n, 16, 1)));
+	if (params->hashtag_flag && n)
+		str = str_concat("0x", str);
+	return (_puts(str));
 }
 
 /**
@@ -25,9 +27,11 @@ int print_hex(va_list ap, params_t *params)
 int print_HEX(va_list ap, params_t *params)
 {
 	unsigned int n = va_arg(ap, unsigned int);
+	char *str = convert(n, 16, 1);
 
-	(void)params;
-	return (_puts(convert(n, 16, 0)));
+	if (params->hashtag_flag && n)
+		str = str_concat("0X", str);
+	return (_puts(str));
 }
 
 /**
@@ -55,7 +59,9 @@ int print_binary(va_list ap, params_t *params)
 int print_octal(va_list ap, params_t *params)
 {
 	unsigned int n = va_arg(ap, unsigned int);
+	char *str = convert(n, 8, 0);
 
-	(void)params;
-	return (_puts(convert(n, 8, 0)));
+	if (params->hashtag_flag && n)
+		str = str_concat("0", str);
+	return (_puts(str));
 }
