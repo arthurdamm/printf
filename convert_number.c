@@ -27,7 +27,7 @@ int print_hex(va_list ap, params_t *params)
 int print_HEX(va_list ap, params_t *params)
 {
 	unsigned int n = va_arg(ap, unsigned int);
-	char *str = convert(n, 16, 0);
+	char *str = convert(n, 16, 1);
 
 	if (params->hashtag_flag && n)
 		str = str_concat("0X", str);
