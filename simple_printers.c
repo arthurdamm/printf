@@ -67,6 +67,6 @@ int print_rot13(va_list ap, params_t *params)
 		i++;
 	}
 	count += _puts(a);
-	free(a);
+	index = 0;
 	return (count);
 }
