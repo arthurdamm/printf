@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    printf("%lhd\n", 35);
-    return (0);
+	printf("%lhd\n", 35);
+	return (0);
 }
