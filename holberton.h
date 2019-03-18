@@ -20,16 +20,12 @@
  * @plus_flag: on if plus_flag specified
  * @space_flag: on if hashtag_flag specified
  * @hashtag_flag: on if _flag specified
- * @h_modifier: on if h_modifier is specified
- * @l_modifier: on if l_modifier is specified
  */
 typedef struct parameters
 {
 	unsigned int plus_flag		: 1;
 	unsigned int space_flag		: 1;
 	unsigned int hashtag_flag	: 1;
-	unsigned int h_modifier : 1;
-	unsigned int l_modifier	: 1;
 
 } params_t;
 
@@ -57,7 +53,7 @@ int print_percent(va_list ap, params_t *params);
 int print_S(va_list ap, params_t *params);
 
 /* number.c module */
-int print_number(int n);
+int print_number(long n, int is_unsigned);
 char *convert(unsigned long int num, int base, short l);
 int print_unsigned(va_list ap, params_t *params);
 int print_address(va_list ap, params_t *params);
@@ -66,7 +62,6 @@ int print_address(va_list ap, params_t *params);
 int (*get_specifier(char *s))(va_list ap, params_t *params);
 int get_print_func(char *s, va_list ap, params_t *params);
 int get_flag(char *s, params_t *params);
-int get_modifier(char *s, params_t *params);
 
 /* convert_number.c module */
 int print_hex(va_list ap, params_t *params);

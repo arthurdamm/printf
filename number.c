@@ -6,17 +6,17 @@
  *
  * Return: bytes printed
  */
-int print_number(int n)
+int print_number(long n, int is_unsigned)
 {
-	int i, p, c = 0;
+	int p, c = 0;
+	unsigned long i = 10000000000000000000UL;
 
-	if (n < 0)
+	if (!is_unsigned && n < 0)
 		c += _putchar('-');
-	for (p = 0, i = 1000000000; i > 0; i /= 10)
+	for (p = 0; i > 0; i /= 10)
 	{
-		int d = (n / i) % 10;
+		unsigned d = (n / i) % 10;
 
-		d = d < 0 ? -d : d;
 		if (d || p || i == 1)
 		{
 			c += _putchar(d + '0');
@@ -64,7 +64,7 @@ int print_unsigned(va_list ap, params_t *params)
 	unsigned int n = va_arg(ap, unsigned int);
 
 	(void)params;
-	return (_puts(convert(n, 10, 0)));
+	return (print_number(n, 1));
 }
 
 
