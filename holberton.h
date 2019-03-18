@@ -71,6 +71,7 @@ int print_octal(va_list ap, params_t *params);
 
 /* simple_printers.c module */
 int print_from_to(char *start, char *stop);
+int print_rev(va_list ap);
 
 /* string_mallo.c module */
 char *str_concat(char *s1, char *s2);
