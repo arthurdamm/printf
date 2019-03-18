@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <limits.h>
+#include <stdlib.h>
 
 #define FLAGS "+ #"
 
@@ -70,6 +71,9 @@ int print_octal(va_list ap, params_t *params);
 
 /* simple_printers.c module */
 int print_from_to(char *start, char *stop);
+
+/* string_mallo.c module */
+char *str_concat(char *s1, char *s2);
 
 /* _prinf.c module */
 int _printf(const char *format, ...);
