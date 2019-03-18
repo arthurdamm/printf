@@ -44,9 +44,11 @@ int print_HEX(va_list ap, params_t *params)
 int print_binary(va_list ap, params_t *params)
 {
 	unsigned int n = va_arg(ap, unsigned int);
+	char *str = convert(n, 2, 0);
 
-	(void)params;
-	return (_puts(convert(n, 2, 0)));
+	if (params->hashtag_flag && n)
+		str = str_concat("0", str);
+	return (_puts(str));
 }
 
 /**
