@@ -1,6 +1,5 @@
 #include "holberton.h"
 
-
 /**
  * print_from_to - prints a range of char addresses
  * @start: starting address
