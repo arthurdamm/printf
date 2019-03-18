@@ -7,7 +7,6 @@
  */
 int main(void)
 {
-    printf("%d\n", _printf("Hello %c%d ZY%fZ %s%e WEW", 'H', 321, 3.14, "lberton"));
-    _printf("%%%s%d%e", NULL, INT_MIN);
+    printf("%lhd\n", 35);
     return (0);
 }
