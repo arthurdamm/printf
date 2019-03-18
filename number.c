@@ -79,7 +79,9 @@ int print_unsigned(va_list ap, params_t *params)
 int print_address(va_list ap, params_t *params)
 {
 	unsigned long int n = va_arg(ap, unsigned long int);
-	char *prefix = params->plus_flag ? "+0x" : "0x";
+	char *prefix = "0x";
+	(void)params;
+/* params->plus_flag ? "+0x" : "0x"; */
 
 	if (!n)
 		return (_puts("(nil)"));
