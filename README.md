@@ -68,21 +68,23 @@ Function name | Description | Format Specifier
 
 *******************************************************************************
 
-
+### Tasks
 <details>
 <summary>
-Tasks
+Click here to expand
 </summary>
-- 0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life (_mandatory_)
- - 1. Education is when you read the fine print. Experience is what you get if you don't mandatory
- - 2. Just because it's in print doesn't mean it's the gospel
- - 3. With a face like mine, I do better in print
- - 4. What one has not experienced, one will never understand in print #advanced
- - 5. Nothing in fine print is ever good news #advanced
- - 6. My weakness is wearing too much leopard print #advanced
- - 7. How is the world ruled and led to war? Diplomats lie to journalists and believe these lies when they see them in print #advanced
- - 8. The big print gives and the small print takes away #advanced
- - 9. Sarcasm is lost in print #advanced
+<ul>
+
+<li>- 0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life (_mandatory_)
+</li><li> - 1. Education is when you read the fine print. Experience is what you get if you don't mandatory
+</li><li> - 2. Just because it's in print doesn't mean it's the gospel
+</li><li> - 3. With a face like mine, I do better in print
+</li><li> - 4. What one has not experienced, one will never understand in print #advanced
+</li><li> - 5. Nothing in fine print is ever good news #advanced
+</li><li> - 6. My weakness is wearing too much leopard print #advanced
+</li><li> - 7. How is the world ruled and led to war? Diplomats lie to journalists and believe these lies when they see them in print #advanced
+</li><li> - 8. The big print gives and the small print takes away #advanced
+</li><li> - 9. Sarcasm is lost in print #advanced
 
 
 
