@@ -114,7 +114,7 @@ Click here to expand
 
 ## Installation
 
-In order to use this custom `_printf` function you need only `<unistd>` library
+In order to use this custom `_printf` function you need only `<unistd.h>` library
 First, clone this repository to your local machine:
 ```
 $ git clone https://github.com/narnat/printf.git
@@ -140,3 +140,7 @@ Now you will have `printf.a` static library, and all you have to do is compile y
 ```
 gcc your_C_source_code -L. -lprintf
 ```
+
+## Authors
+(Arthur Damm)[https://github.com/arthurdamm]
+(Farrukh Akhrarov)[https://github.com/narnat]
