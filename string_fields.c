@@ -1,6 +1,6 @@
 #include "holberton.h"
 
-/*
+/**
  * add_width - adds the width to this string
  * @p: pointer to char buffer
  * @params: params struct
