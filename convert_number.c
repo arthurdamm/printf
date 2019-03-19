@@ -51,7 +51,7 @@ int print_HEX(va_list ap, params_t *params)
 	if (params->hashtag_flag && l)
 	{
 		c += _putchar('0');
-		c += _putchar('x');
+		c += _putchar('X');
 	}
 	return (c += _puts(convert(l, 16, 0)));
 }
