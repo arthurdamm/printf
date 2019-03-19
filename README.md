@@ -10,7 +10,7 @@ Table of contents
 =================
 
 <!--ts-->
-   * [_printf](#overview)
+   * [Overview](#overview)
    * [Table of contents](#table-of-contents)
    * [General Requirements](#general-requirements)
    * [Authorized functions and macros](#authorized-functions-and-macros)
