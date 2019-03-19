@@ -52,7 +52,7 @@ int print_rot13(va_list ap, params_t *params)
 	(void)params;
 	int i, index;
 	int count = 0;
-	char arr[] = "NOPQRSTUVWXYZABCDEFGHIJKLM      nopqrstuvwxyzabcdefghijklm";
+	char *arr = "NOPQRSTUVWXYZABCDEFGHIJKLM      nopqrstuvwxyzabcdefghijklm";
 	char *a = str_concat("", va_arg(ap, char *));
 
 	i = 0;
@@ -67,6 +67,6 @@ int print_rot13(va_list ap, params_t *params)
 		i++;
 	}
 	count += _puts(a);
-	index = 0;
+	free(a);
 	return (count);
 }
