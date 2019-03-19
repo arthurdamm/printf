@@ -53,7 +53,7 @@ int print_HEX(va_list ap, params_t *params)
 		c += _putchar('0');
 		c += _putchar('X');
 	}
-	return (c += _puts(convert(l, 16, CONVERT_UNSIGNED)));
+	return (c += _puts(convert(l, 16, CONVERT_UNSIGNED)))	;
 }
 /**
  * print_binary - prints unsigned binary number

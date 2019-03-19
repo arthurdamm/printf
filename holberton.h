@@ -9,12 +9,14 @@
 
 #define FLAGS "+ #"
 
-#define BUF_SIZE 1024
+#define OUTPUT_BUF_SIZE 1024
 #define BUF_FLUSH -1
+
+#define FIELD_BUF_SIZE 50
 
 #define NULL_STRING "(null)"
 
-#define PARAMS_INIT { 0, 0, 0, 0, 0, 0}
+#define PARAMS_INIT {0, 0, 0, 0, 0, 0}
 
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
@@ -93,8 +95,14 @@ int print_rot13(va_list ap, params_t *params);
 /* atoi.c module */
 int _isdigit(int c);
 
-/* string_mallo.c module */
+/* params.c module */
+void clear_params(params_t *params);
+
+/* string_malloc.c module */
 char *str_concat(char *s1, char *s2);
+
+/* string_fields.c modoule */
+char *add_width(char *p, params_t *params);
 
 /* _prinf.c module */
 int _printf(const char *format, ...);

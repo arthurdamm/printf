@@ -41,7 +41,7 @@ int print_number(long n, int is_unsigned)
 char *convert(long int num, int base, int flags)
 {
 	static char *array;
-	static char buffer[50];
+	static char buffer[FIELD_BUF_SIZE];
 	char sign = 0;
 	char *ptr;
 	unsigned long n = num;
@@ -53,7 +53,7 @@ char *convert(long int num, int base, int flags)
 
 	}
 	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
-	ptr = &buffer[49];
+	ptr = &buffer[FIELD_BUF_SIZE - 1];
 	*ptr = '\0';
 
 	do	{

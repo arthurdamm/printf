@@ -36,7 +36,7 @@ int print_int(va_list ap, params_t *params)
 		n += _putchar('+');
 	else if (params->space_flag && l >= 0)
 		n += _putchar(' ');
-	return (n += _puts(convert(l, 10, 0)));
+	return (n += _puts(add_width(convert(l, 10, 0), params)));
 }
 
 /**
