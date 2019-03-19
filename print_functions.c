@@ -34,7 +34,7 @@ int print_int(va_list ap, params_t *params)
 
 	if (params->plus_flag && l >= 0)
 		n += _putchar('+');
-	else if (params->space_flag && l > 0)
+	else if (params->space_flag && l >= 0)
 		n += _putchar(' ');
 
 	if (l < 0)
