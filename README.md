@@ -13,7 +13,9 @@ Table of contents
    * [_printf](#overview)
    * [Table of contents](#table-of-contents)
    * [General Requirements](#general-requirements)
-   * [Usage](#usage)
+   * [Authorized functions and macros](#authorized-functions-and-macros)
+   * [Compilation](#compilation)
+   * [Format Specifiers](#format-specifiers)
       * [STDIN](#stdin)
       * [Local files](#local-files)
       * [Remote files](#remote-files)
@@ -69,7 +71,7 @@ Your code should use the Betty style. It will be checked using [betty-style.pl](
 
 *******************************************************************************
 
-### Format Specifiers
+## Format Specifiers
 Function name | Description | Format Specifier
 --- | --- | ---
 `print_char` | Prints a character | `%c`
