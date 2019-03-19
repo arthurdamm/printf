@@ -88,15 +88,13 @@ int print_unsigned(va_list ap, params_t *params)
 int print_address(va_list ap, params_t *params)
 {
 	unsigned long int n = va_arg(ap, unsigned long int);
-	char *prefix = "0x";
-	int c;
+	int c = 0;
 	(void)params;
-/* params->plus_flag ? "+0x" : "0x"; */
 
 	if (!n)
 		return (_puts("(nil)"));
-	prefix = str_concat(prefix, convert(n, 16, 1));
-	c = _puts(prefix);
-	free(prefix);
+	c += _putchar('0');
+	c += _putchar('x');
+	c += _puts(convert(n, 16, 1));
 	return (c);
 }
