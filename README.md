@@ -2,7 +2,15 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/narnat/printf)
 
-**_printf()** - is a Holberton school group project. The task is to write a custom version of printf() from standard library. Here are the general requirements:
+## Overview
+
+**_printf()** - is a Holberton school group project. The task is to write a custom version of printf() from standard library.
+
+*************************************************************************
+
+## General Requirements
+
+Here are the general requirements:
 
   - Allowed editors: vi, vim, emacs
   - All your files will be compiled on Ubuntu 14.04 LTS
@@ -36,5 +44,6 @@ Your code should use the Betty style. It will be checked using [betty-style.pl](
   -  Your code will be compiled this way:
   ```$ gcc -Wall -Werror -Wextra -pedantic *.c```
   - As a consequence, be careful not to push any c file containing a main function in the root directory of your project (you could have a test folder containing all your tests files including main functions)
-  - Our main files will include your main header file (holberton.h): #include holberton.h
+  - Our main files will include your main header file (`holberton.h`): `#include holberton.h`
   - You might want to look at the `gcc` flag `-Wno-format` when testing with your `_printf` and the standard `printf`.
+
