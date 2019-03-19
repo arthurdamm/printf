@@ -142,5 +142,5 @@ gcc your_C_source_code -L. -lprintf
 ```
 
 ## Authors
-[(Arthur Damm)https://github.com/arthurdamm]
-[(Farrukh Akhrarov)https://github.com/narnat]
+[Arthur Damm](https://github.com/arthurdamm)
+[Farrukh Akhrarov](https://github.com/narnat)
