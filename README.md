@@ -110,6 +110,12 @@ Click here to expand
 </li><li> - 15. The flood of print has turned reading into a process of gulping rather than savoring <i>#advanced</i>
 </li><li> - 16. All of the above functionality should work flawlessly <i>#advanced</i>
 </ul>
-
-
 </details>
+
+##Installation
+
+In order to use this custom `_printf` function you need only `<unistd>` library
+First, clone this repository to your local machine:
+```
+$ git clone https://github.com/narnat/printf.git
+```
