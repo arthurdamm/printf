@@ -2,7 +2,13 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/narnat/printf)
 
-**_printf()** - is a Holberton school group project. The task is to write a custom version of printf() from standard library. Here are the general requirements:
+##Overview
+
+**_printf()** - is a Holberton school group project. The task is to write a custom version of printf() from standard library.
+
+##General Requirements
+
+Here are the general requirements:
 
   - Allowed editors: vi, vim, emacs
   - All your files will be compiled on Ubuntu 14.04 LTS
