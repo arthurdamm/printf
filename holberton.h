@@ -14,7 +14,7 @@
 
 #define NULL_STRING "(null)"
 
-#define PARAMS_INIT { 0, 0, 0, 0, 0}
+#define PARAMS_INIT { 0, 0, 0, 0, 0, 0}
 
 /**
  * struct parameters - parameters struct
@@ -22,6 +22,9 @@
  * @plus_flag: on if plus_flag specified
  * @space_flag: on if hashtag_flag specified
  * @hashtag_flag: on if _flag specified
+ *
+ * @width: field width specified
+ *
  * @h_modifier: on if h_modifier is specified
  * @l_modifier: on if l_modifier is specified
  */
@@ -30,6 +33,9 @@ typedef struct parameters
 	unsigned int plus_flag		: 1;
 	unsigned int space_flag		: 1;
 	unsigned int hashtag_flag	: 1;
+
+	unsigned int width;
+
 	unsigned int h_modifier		: 1;
 	unsigned int l_modifier		: 1;
 } params_t;
@@ -68,6 +74,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params);
 int get_print_func(char *s, va_list ap, params_t *params);
 int get_flag(char *s, params_t *params);
 int get_modifier(char *s, params_t *params);
+char *get_width(char *s, params_t *params);
 
 /* convert_number.c module */
 int print_hex(va_list ap, params_t *params);
@@ -79,6 +86,9 @@ int print_octal(va_list ap, params_t *params);
 int print_from_to(char *start, char *stop);
 int print_rev(va_list ap, params_t *params);
 int print_rot13(va_list ap, params_t *params);
+
+/* atoi.c module */
+int _isdigit(int c);
 
 /* string_mallo.c module */
 char *str_concat(char *s1, char *s2);
