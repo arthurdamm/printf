@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 		}
 		start = p;
 		p++;
-		while (0 && get_flag(p, &params)) /* while char at p is flag char */
+		while (get_flag(p, &params)) /* while char at p is flag char */
 		{
 			p++; /* next char */
 		}
