@@ -1,6 +1,6 @@
 # An implementation of printf() function in pure C programming language
 
-[![Build Status]()](https://github.com/narnat/printf)
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/narnat/printf)
 
 ## Overview
 
