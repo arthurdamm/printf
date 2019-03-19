@@ -90,6 +90,8 @@ Click here to expand
 </li><li> - 12. It's depressing when you're still around and your albums are out of print #advanced
 </li><li> - 13. Every time that I wanted to give up, if I saw an interesting textile, print what ever, suddenly I would see a collection #advanced
 </li><li> - 14. Print is the sharpest and the strongest weapon of our party #advanced
+</li><li> - 15. The flood of print has turned reading into a process of gulping rather than savoring #advanced
+</li><li> - 16. All of the above functionality should work flawlessly #advanced
 </ul>
 
 
