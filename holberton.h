@@ -16,6 +16,9 @@
 
 #define PARAMS_INIT { 0, 0, 0, 0, 0, 0}
 
+#define CONVERT_LOWERCASE	1
+#define CONVERT_UNSIGNED	2
+
 /**
  * struct parameters - parameters struct
  *
@@ -65,7 +68,7 @@ int print_S(va_list ap, params_t *params);
 
 /* number.c module */
 int print_number(long n, int is_unsigned);
-char *convert(unsigned long int num, int base, short l);
+char *convert(long int num, int base, int flags);
 int print_unsigned(va_list ap, params_t *params);
 int print_address(va_list ap, params_t *params);
 

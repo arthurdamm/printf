@@ -30,6 +30,7 @@ int _printf(const char *format, ...)
 		{
 			p++; /* next char */
 		}
+		p = get_width(p, &params);
 		if (get_modifier(p, &params))
 			p++;
 		if (!get_specifier(p))

@@ -35,24 +35,34 @@ int print_number(long n, int is_unsigned)
  * convert - converter function, a clone of itoa
  * @num: number
  * @base: base
- * @l: lowercase or not
+ * @flags: argument flags
  * Return: string
  */
-char *convert(unsigned long int num, int base, short l)
+char *convert(long int num, int base, int flags)
 {
 	static char *array;
 	static char buffer[50];
+	char sign = 0;
 	char *ptr;
+	unsigned long n = num;
 
-	array = l ? "0123456789abcdef" : "0123456789ABCDEF";
+	if (!(flags & CONVERT_UNSIGNED) && num < 0)
+	{
+		n = -num;
+		sign = '-';
+
+	}
+	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = '\0';
 
 	do	{
-		*--ptr = array[num % base];
-		num /= base;
-	} while (num != 0);
+		*--ptr = array[n % base];
+		n /= base;
+	} while (n != 0);
 
+	if (sign)
+		*--ptr = sign;
 	return (ptr);
 }
 

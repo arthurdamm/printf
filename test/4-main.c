@@ -4,10 +4,9 @@ int main(void)
 {
 	int alen, elen, p, n, z;
 
-	// NULL
 	printf("START OF TEST\n");
 
-	//d
+
 	printf("=====================\n");
 	printf("*****DECIMAL*****\n");
 	printf("=====================\n");
@@ -16,7 +15,7 @@ int main(void)
 	n = 4567;
 	z = 0;
 
-	//u
+
 	printf("=====================\n");
 	printf("*****ld*****\n");
 	printf("=====================\n");
@@ -32,8 +31,10 @@ int main(void)
 	_printf("Actual     : %ld\n", z);
 	printf("Expected   : %ld\n", LONG_MAX);
 	_printf("Actual     : %ld\n", LONG_MAX);
+
 	printf("Expected   : %ld\n", LONG_MIN);
 	_printf("Actual     : %ld\n", LONG_MIN);
+
 	printf("=====================\n");
 		printf("=====================\n");
 	printf("*****hd*****\n");
@@ -56,7 +57,7 @@ int main(void)
 	printf("=====================\n");
 	printf("=====================\n");
 
-	/*
+	
 	printf("*****hex*****\n");
 	printf("=====================\n");
 	elen = printf("Expected   : %x\n", p);
@@ -93,5 +94,5 @@ int main(void)
 	printf("Expected   : %X\n", INT_MIN);
 	_printf("Actual     : %X\n", INT_MIN);
 	printf("=====================\n");
-	*/
+
 }
