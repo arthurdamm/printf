@@ -6,6 +6,8 @@
 
 **_printf()** - is a Holberton school group project. The task is to write a custom version of printf() from standard library.
 
+*************************************************************************
+
 ## General Requirements
 
 Here are the general requirements:
