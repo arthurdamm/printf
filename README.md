@@ -16,15 +16,10 @@ Table of contents
    * [Authorized functions and macros](#authorized-functions-and-macros)
    * [Compilation](#compilation)
    * [Format Specifiers](#format-specifiers)
-      * [STDIN](#stdin)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
-      * [Auto insert and update TOC](#auto-insert-and-update-toc)
-      * [Github token](#github-token)
-   * [Tests](#tests)
-   * [Dependency](#dependency)
+   * [Tasks](#tasks)
+   * [Installation](#installation)
+   * [Examples](#examples)
+   * [Authors](#authors)
 <!--te-->
 
 
