@@ -103,3 +103,23 @@ int get_modifier(char *s, params_t *params)
 	}
 	return (i);
 }
+
+/**
+ * get_width - gets the width from the format string
+ * @s: the format string
+ * @params: the parameters struct
+ *
+ * Return: new pointer
+ */
+char *get_width(char *s, params_t *params)
+/* should this function use char **s and modify the pointer? */
+{
+	int d = 0;
+
+	while (_isdigit(*s))
+		d = d * 10 + (*s++ - '0');
+	params->width = d;
+	return (s);
+}
+
+
