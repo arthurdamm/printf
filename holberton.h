@@ -26,7 +26,8 @@ typedef struct parameters
 	unsigned int plus_flag		: 1;
 	unsigned int space_flag		: 1;
 	unsigned int hashtag_flag	: 1;
-
+	/* unsigned int h_modifier : 1; */
+	/* unsigned int l_modifier	: 1; */
 } params_t;
 
 /**
@@ -62,6 +63,10 @@ int print_address(va_list ap, params_t *params);
 int (*get_specifier(char *s))(va_list ap, params_t *params);
 int get_print_func(char *s, va_list ap, params_t *params);
 int get_flag(char *s, params_t *params);
+<<<<<<< HEAD
+=======
+/* int get_modifier(char *s, params_t *params); */
+>>>>>>> master
 
 /* convert_number.c module */
 int print_hex(va_list ap, params_t *params);
