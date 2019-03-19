@@ -50,7 +50,11 @@ Your code should use the Betty style. It will be checked using [betty-style.pl](
 ### Format Specifiers
 Function name | Description | Format Specifier
 --- | --- | ---
-`print_c` | Prints a character | `%c`
-`print_s` | Prints a 0000000 | `%d`
-`print_p` | Prints a % | `%%`
-`print_d` | Prints  | `%d` & `%i`
+`print_char` | Prints a character | `%c`
+`print_int` | Prints a 0000000 | `%d`
+`print_percent` | Prints a % | `%%`
+`print_int` | Prints  | `%d` & `%i`
+`print_char` | Prints a character | `%c`
+`print_int` | Prints a 0000000 | `%d`
+`print_percent` | Prints a % | `%%`
+`print_int` | Prints  | `%d` & `%i`
