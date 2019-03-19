@@ -65,10 +65,15 @@ char *convert(unsigned long int num, int base, short l)
  */
 int print_unsigned(va_list ap, params_t *params)
 {
-	unsigned int n = va_arg(ap, unsigned int);
+	unsigned long l;
 
-	(void)params;
-	return (print_number(n, 1));
+	if (params->l_modifier)
+		l = (unsigned long)va_arg(ap, unsigned long);
+	else if (params->h_modifier)
+		l = (unsigned short int)va_arg(ap, unsigned int);
+	else
+		l = (unsigned int)va_arg(ap, unsigned int);
+	return (print_number(l, 1));
 }
 
 
