@@ -39,7 +39,6 @@ int print_int(va_list ap, params_t *params)
 
 	if (l < 0)
 	{
-
 		n += _putchar('-');
 		l = -((unsigned int)l);
 	}

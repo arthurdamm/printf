@@ -10,7 +10,7 @@
 int print_hex(va_list ap, params_t *params)
 {
 	unsigned long l;
-	char *str;
+	int c = 0;
 
 	if (params->l_modifier)
 		l = (unsigned long)va_arg(ap, unsigned long);
@@ -18,11 +18,14 @@ int print_hex(va_list ap, params_t *params)
 		l = (unsigned short int)va_arg(ap, unsigned int);
 	else
 		l = (unsigned int)va_arg(ap, unsigned int);
-	str = convert(l, 16, 1);
+	
 
 	if (params->hashtag_flag && l)
-		str = str_concat("0x", str);
-	return (_puts(str));
+	{
+		c += _putchar('0');
+		c += _putchar('x');
+	}
+	return (c += _puts(convert(l, 16, 1)));
 }
 
 /**
@@ -35,7 +38,7 @@ int print_hex(va_list ap, params_t *params)
 int print_HEX(va_list ap, params_t *params)
 {
 	unsigned long l;
-	char *str;
+	int c = 0;
 
 	if (params->l_modifier)
 		l = (unsigned long)va_arg(ap, unsigned long);
@@ -43,13 +46,15 @@ int print_HEX(va_list ap, params_t *params)
 		l = (unsigned short int)va_arg(ap, unsigned int);
 	else
 		l = (unsigned int)va_arg(ap, unsigned int);
-	str = convert(l, 16, 0);
+	
 
 	if (params->hashtag_flag && l)
-		str = str_concat("0X", str);
-	return (_puts(str));
+	{
+		c += _putchar('0');
+		c += _putchar('x');
+	}
+	return (c += _puts(convert(l, 16, 0)));
 }
-
 /**
  * print_binary - prints unsigned binary number
  * @ap: the argument pointer
