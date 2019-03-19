@@ -6,9 +6,9 @@
 
   - Allowed editors: vi, vim, emacs
   - All your files will be compiled on Ubuntu 14.04 LTS
-  - Your programs and functions will be compiled with gcc 4.8.4 using the flags **-Wall -Werror -Wextra and -pedantic**
+  - Your programs and functions will be compiled with gcc 4.8.4 using the flags **-Wall -Werror -Wextra** and **-pedantic**
   - All your files should end with a new line
-  - A README.md file, at the root of the folder of the project is mandatory
+  - *A README.md* file, at the root of the folder of the project is mandatory
 Your code should use the Betty style. It will be checked using [betty-style.pl](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl) and [betty-doc.pl](https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl)
   - You are not allowed to use global variables
   - No more than 5 functions per file
@@ -29,4 +29,12 @@ Your code should use the Betty style. It will be checked using [betty-style.pl](
   - `va_end (man 3 va_end)`
   - `va_copy (man 3 va_copy)`
   - `va_arg (man 3 va_arg)`
-  
+
+******************************************************************************
+
+## Compilation
+  -  Your code will be compiled this way:
+  ```$ gcc -Wall -Werror -Wextra -pedantic *.c```
+  - As a consequence, be careful not to push any c file containing a main function in the root directory of your project (you could have a test folder containing all your tests files including main functions)
+  - Our main files will include your main header file (holberton.h): #include holberton.h
+  - You might want to look at the `gcc` flag `-Wno-format` when testing with your `_printf` and the standard `printf`.
