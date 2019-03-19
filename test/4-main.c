@@ -51,8 +51,8 @@ int main(void)
 	_printf("Actual     : %hd\n", z);
 	printf("Expected   : %hd\n", SHRT_MAX);
 	_printf("Actual     : %hd\n", SHRT_MAX);
-	printf("Expected   : %hd\n", SHRT_MIN);
-	_printf("Actual     : %hd\n", SHRT_MIN);
+	printf("Expected   : %x\n", SHRT_MIN);
+	_printf("Actual     : %x\n", SHRT_MIN);
 	printf("=====================\n");
 	printf("=====================\n");
 
