@@ -37,7 +37,13 @@ int print_int(va_list ap, params_t *params)
 	else if (params->space_flag && l > 0)
 		n += _putchar(' ');
 
-	return (n += print_number(l, 0));
+	if (l < 0)
+	{
+
+		n += _putchar('-');
+		l = -((unsigned int)l);
+	}
+	return (n += _puts(convert(l, 10, 0)));
 }
 
 /**

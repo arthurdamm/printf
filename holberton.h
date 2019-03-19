@@ -14,6 +14,8 @@
 
 #define NULL_STRING "(null)"
 
+#define PARAMS_INIT { 0, 0, 0, 0, 0}
+
 /**
  * struct parameters - parameters struct
  *
