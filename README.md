@@ -6,6 +6,23 @@
 
 **_printf()** - is a Holberton school group project. The task is to write a custom version of printf() from standard library.
 
+Table of contents
+=================
+
+<!--ts-->
+   * [Overview](#overview)
+   * [Table of contents](#table-of-contents)
+   * [General Requirements](#general-requirements)
+   * [Authorized functions and macros](#authorized-functions-and-macros)
+   * [Compilation](#compilation)
+   * [Format Specifiers](#format-specifiers)
+   * [Tasks](#tasks)
+   * [Installation](#installation)
+   * [Examples](#examples)
+   * [Authors](#authors)
+<!--te-->
+
+
 *************************************************************************
 
 ## General Requirements
@@ -47,10 +64,58 @@ Your code should use the Betty style. It will be checked using [betty-style.pl](
   - Our main files will include your main header file (`holberton.h`): `#include holberton.h`
   - You might want to look at the `gcc` flag `-Wno-format` when testing with your `_printf` and the standard `printf`.
 
-### Format Specifiers
+*******************************************************************************
+
+## Format Specifiers
 Function name | Description | Format Specifier
 --- | --- | ---
-`print_c` | Prints a character | `%c`
-`print_s` | Prints a 0000000 | `%d`
-`print_p` | Prints a % | `%%`
-`print_d` | Prints  | `%d` & `%i`
+`print_char` | Prints a character | `%c`
+`print_percent` | Prints a % | `%%`
+`print_int` | Prints an integer | `%d` & `%i`
+`print_string` | Prints a string | `%s`
+`print_binary` | Prints a binary, custom specifier | `%b`
+`print_octal` | Prints number in base 8 | `%o`
+`print_hex` | Prints hexadecimal in lowercase | `%x`
+`print_HEX` | Prints hexadecimal in uppercase | `%X`
+`print_unsigned` | Prints unsigned integer | `%u`
+`print_S` | Prints string, prints hex value of non visible characters | `%S`
+`print_address` | Prints a pointer | `%p`
+`print_rev` | Prints string in reverse, custom specifier | `%S`
+
+
+*******************************************************************************
+
+### Tasks
+<details>
+<summary>
+Click here to expand
+</summary>
+<ul>
+
+<li>- 0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life <i>mandatory</i>
+</li><li> - 1. Education is when you read the fine print. Experience is what you get if you don't  <i>mandatory</i>
+</li><li> - 2. Just because it's in print doesn't mean it's the gospel  <i>mandatory</i>
+</li><li> - 3. With a face like mine, I do better in print <i>#advanced</i>
+</li><li> - 4. What one has not experienced, one will never understand in print <i>#advanced</i>
+</li><li> - 5. Nothing in fine print is ever good news <i>#advanced</i>
+</li><li> - 6. My weakness is wearing too much leopard print <i>#advanced</i>
+</li><li> - 7. How is the world ruled and led to war? Diplomats lie to journalists and believe these lies when they see them in print <i>#advanced</i>
+</li><li> - 8. The big print gives and the small print takes away <i>#advanced</i>
+</li><li> - 9. Sarcasm is lost in print <i>#advanced</i>
+</li><li> - 10. Print some money and give it to us for the rain forests <i>#advanced</i>
+</li><li> - 11. The negative is the equivalent of the composer's score, and the print the performance <i>#advanced</i>
+</li><li> - 12. It's depressing when you're still around and your albums are out of print <i>#advanced</i>
+</li><li> - 13. Every time that I wanted to give up, if I saw an interesting textile, print what ever, suddenly I would see a collection <i>#advanced</i>
+</li><li> - 14. Print is the sharpest and the strongest weapon of our party <i>#advanced</i>
+</li><li> - 15. The flood of print has turned reading into a process of gulping rather than savoring <i>#advanced</i>
+</li><li> - 16. All of the above functionality should work flawlessly <i>#advanced</i>
+</ul>
+</details>
+
+## Installation
+
+In order to use this custom `_printf` function you need only `<unistd>` library
+First, clone this repository to your local machine:
+```
+$ git clone https://github.com/narnat/printf.git
+```
