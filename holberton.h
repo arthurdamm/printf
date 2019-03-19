@@ -63,10 +63,7 @@ int print_address(va_list ap, params_t *params);
 int (*get_specifier(char *s))(va_list ap, params_t *params);
 int get_print_func(char *s, va_list ap, params_t *params);
 int get_flag(char *s, params_t *params);
-<<<<<<< HEAD
-=======
 /* int get_modifier(char *s, params_t *params); */
->>>>>>> master
 
 /* convert_number.c module */
 int print_hex(va_list ap, params_t *params);
