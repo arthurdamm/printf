@@ -47,3 +47,10 @@ Your code should use the Betty style. It will be checked using [betty-style.pl](
   - Our main files will include your main header file (`holberton.h`): `#include holberton.h`
   - You might want to look at the `gcc` flag `-Wno-format` when testing with your `_printf` and the standard `printf`.
 
+### Format Specifiers
+Function name | Description | Format Specifier
+--- | --- | ---
+`print_c` | Prints a character | `%c`
+`print_s` | Prints a 0000000 | `%d`
+`print_p` | Prints a % | `%%`
+`print_d` | Prints  | `%d` & `%i`
