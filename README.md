@@ -112,7 +112,7 @@ Click here to expand
 </ul>
 </details>
 
-##Installation
+## Installation
 
 In order to use this custom `_printf` function you need only `<unistd>` library
 First, clone this repository to your local machine:
