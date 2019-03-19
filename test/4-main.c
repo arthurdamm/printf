@@ -18,43 +18,45 @@ int main(void)
 
 	//u
 	printf("=====================\n");
-	printf("*****UNSIGNED*****\n");
+	printf("*****ld*****\n");
 	printf("=====================\n");
-	elen = printf("Expected   : %u\n", p);
-	alen = _printf("Actual     : %u\n", p);
-	printf("Expected   : %u\n", elen);
-	_printf("Actual     : %u\n", alen);
-	elen = printf("Expected   : %u\n", n);
-	alen = _printf("Actual     : %u\n", n);
-	printf("Expected   : %u\n", elen);
-	_printf("Actual     : %u\n", alen);
-	printf("Expected   : %u\n", z);
-	_printf("Actual     : %u\n", z);
-	printf("Expected   : %u\n", INT_MAX);
-	_printf("Actual     : %u\n", INT_MAX);
-	printf("Expected   : %u\n", INT_MIN);
-	_printf("Actual     : %u\n", INT_MIN);
+	elen = printf("Expected   : %ld\n", p);
+	alen = _printf("Actual     : %ld\n", p);
+	printf("Expected   : %ld\n", elen);
+	_printf("Actual     : %ld\n", alen);
+	elen = printf("Expected   : %ld\n", n);
+	alen = _printf("Actual     : %ld\n", n);
+	printf("Expected   : %ld\n", elen);
+	_printf("Actual     : %ld\n", alen);
+	printf("Expected   : %ld\n", z);
+	_printf("Actual     : %ld\n", z);
+	printf("Expected   : %ld\n", LONG_MAX);
+	_printf("Actual     : %ld\n", LONG_MAX);
+	printf("Expected   : %ld\n", LONG_MIN);
+	_printf("Actual     : %ld\n", LONG_MIN);
 	printf("=====================\n");
 		printf("=====================\n");
-	printf("*****OCTAL*****\n");
+	printf("*****hd*****\n");
+	printf("=====================\n");
+	p = -1134;
+	elen = printf("Expected   : %hd\n", p);
+	alen = _printf("Actual     : %hd\n", p);
+	printf("Expected   : %hd\n", elen);
+	_printf("Actual     : %hd\n", alen);
+	elen = printf("Expected   : %hd\n", n);
+	alen = _printf("Actual     : %hd\n", n);
+	printf("Expected   : %hd\n", elen);
+	_printf("Actual     : %hd\n", alen);
+	printf("Expected   : %hd\n", z);
+	_printf("Actual     : %hd\n", z);
+	printf("Expected   : %hd\n", SHRT_MAX);
+	_printf("Actual     : %hd\n", SHRT_MAX);
+	printf("Expected   : %hd\n", SHRT_MIN);
+	_printf("Actual     : %hd\n", SHRT_MIN);
+	printf("=====================\n");
 	printf("=====================\n");
 
-	elen = printf("Expected   : %o\n", p);
-	alen = _printf("Actual     : %o\n", p);
-	printf("Expected   : %o\n", elen);
-	_printf("Actual     : %o\n", alen);
-	elen = printf("Expected   : %o\n", n);
-	alen = _printf("Actual     : %o\n", n);
-	printf("Expected   : %o\n", elen);
-	_printf("Actual     : %o\n", alen);
-	printf("Expected   : %o\n", z);
-	_printf("Actual     : %o\n", z);
-	printf("Expected   : %o\n", INT_MAX);
-	_printf("Actual     : %o\n", INT_MAX);
-	printf("Expected   : %o\n", INT_MIN);
-	_printf("Actual     : %o\n", INT_MIN);
-	printf("=====================\n");
-	printf("=====================\n");
+	/*
 	printf("*****hex*****\n");
 	printf("=====================\n");
 	elen = printf("Expected   : %x\n", p);
@@ -91,4 +93,5 @@ int main(void)
 	printf("Expected   : %X\n", INT_MIN);
 	_printf("Actual     : %X\n", INT_MIN);
 	printf("=====================\n");
+	*/
 }

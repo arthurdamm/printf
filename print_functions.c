@@ -22,14 +22,22 @@ int print_char(va_list ap, params_t *params)
  */
 int print_int(va_list ap, params_t *params)
 {
-	int i = va_arg(ap, int);
 	int n = 0;
+	long l;
 
-	if (params->plus_flag && i >= 0)
+	if (params->l_modifier)
+		l = va_arg(ap, long);
+	else if(params->h_modifier)
+		l = (short int)va_arg(ap, int);
+	else
+		l = (int)va_arg(ap, int);
+
+	if (params->plus_flag && l >= 0)
 		n += _putchar('+');
-	else if (params->space_flag && i > 0)
+	else if (params->space_flag && l > 0)
 		n += _putchar(' ');
-	return (n += print_number(i, 0));
+
+	return (n += print_number(l, 0));
 }
 
 /**
