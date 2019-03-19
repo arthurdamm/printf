@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	printf("%lhd\n", 35);
+	_printf("%R\n", "HOLBERTON13");
 	return (0);
 }
