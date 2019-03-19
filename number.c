@@ -3,6 +3,7 @@
 /**
  * print_number - using only _putchar
  * @n: the integer to print
+ * @is_unsigned: flag if unsigned
  *
  * Return: bytes printed
  */
@@ -12,10 +13,13 @@ int print_number(long n, int is_unsigned)
 	unsigned long i = 10000000000000000000UL;
 
 	if (!is_unsigned && n < 0)
+	{
 		c += _putchar('-');
+		n = -n;
+	}
 	for (p = 0; i > 0; i /= 10)
 	{
-		unsigned d = (n / i) % 10;
+		unsigned int d = (n / i) % 10;
 
 		if (d || p || i == 1)
 		{
