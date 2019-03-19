@@ -6,6 +6,26 @@
 
 **_printf()** - is a Holberton school group project. The task is to write a custom version of printf() from standard library.
 
+Table of contents
+=================
+
+<!--ts-->
+   * [_printf](#overview)
+   * [Table of contents](#table-of-contents)
+   * [General Requirements](#general-requirements)
+   * [Usage](#usage)
+      * [STDIN](#stdin)
+      * [Local files](#local-files)
+      * [Remote files](#remote-files)
+      * [Multiple files](#multiple-files)
+      * [Combo](#combo)
+      * [Auto insert and update TOC](#auto-insert-and-update-toc)
+      * [Github token](#github-token)
+   * [Tests](#tests)
+   * [Dependency](#dependency)
+<!--te-->
+
+
 *************************************************************************
 
 ## General Requirements
