@@ -84,10 +84,14 @@ int print_address(va_list ap, params_t *params)
 {
 	unsigned long int n = va_arg(ap, unsigned long int);
 	char *prefix = "0x";
+	int c;
 	(void)params;
 /* params->plus_flag ? "+0x" : "0x"; */
 
 	if (!n)
 		return (_puts("(nil)"));
-	return (_puts(str_concat(prefix, convert(n, 16, 1))));
+	prefix = str_concat(prefix, convert(n, 16, 1));
+	c = _puts(prefix);
+	free(prefix);
+	return (c);
 }
