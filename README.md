@@ -54,7 +54,8 @@ Function name | Description | Format Specifier
 `print_int` | Prints a 0000000 | `%d`
 `print_percent` | Prints a % | `%%`
 `print_int` | Prints  | `%d` & `%i`
-`print_char` | Prints a character | `%c`
-`print_int` | Prints a 0000000 | `%d`
-`print_percent` | Prints a % | `%%`
-`print_int` | Prints  | `%d` & `%i`
+`print_string` | Prints a string | `%s`
+`print_binary` | Prints a binary, custom specifier | `%b`
+`print_octal` | Prints number in base 8 | `%o`
+`print_hex` | Prints hexadecimal in lowercase | `%x`
+`print_HEX` | Prints hexadecimal in uppercase | `%X`
