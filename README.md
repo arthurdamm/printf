@@ -51,9 +51,8 @@ Your code should use the Betty style. It will be checked using [betty-style.pl](
 Function name | Description | Format Specifier
 --- | --- | ---
 `print_char` | Prints a character | `%c`
-`print_int` | Prints a 0000000 | `%d`
 `print_percent` | Prints a % | `%%`
-`print_int` | Prints  | `%d` & `%i`
+`print_int` | Prints an integer | `%d` & `%i`
 `print_string` | Prints a string | `%s`
 `print_binary` | Prints a binary, custom specifier | `%b`
 `print_octal` | Prints number in base 8 | `%o`
