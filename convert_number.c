@@ -66,10 +66,11 @@ int print_binary(va_list ap, params_t *params)
 {
 	unsigned int n = va_arg(ap, unsigned int);
 	char *str = convert(n, 2, 0);
+	int c = 0;
 
 	if (params->hashtag_flag && n)
-		str = str_concat("0", str);
-	return (_puts(str));
+		c += _putchar('0');
+	return (c += _puts(str));
 }
 
 /**
@@ -83,6 +84,7 @@ int print_octal(va_list ap, params_t *params)
 {
 	unsigned long l;
 	char *str;
+	int c = 0;
 
 	if (params->l_modifier)
 		l = (unsigned long)va_arg(ap, unsigned long);
@@ -93,6 +95,6 @@ int print_octal(va_list ap, params_t *params)
 	str = convert(l, 8, 0);
 
 	if (params->hashtag_flag && l)
-		str = str_concat("0", str);
-	return (_puts(str));
+		c += _putchar('0');
+	return (c += _puts(str));
 }
