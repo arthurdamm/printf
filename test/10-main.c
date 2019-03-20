@@ -36,6 +36,21 @@ int main(void)
 	_printf("Actual     : %10ld\n", LONG_MIN);
 
 
+	elen = printf("Expected!   : %10x\n", (long)-2);
+	alen = _printf("Actual!     : %10x\n", (long)-2);
+	printf("Expected   : %10x\n", elen);
+	_printf("Actual     : %10x\n", alen);
+	elen = printf("Expected   : %10x\n", n);
+	alen = _printf("Actual     : %10x\n", n);
+	printf("Expected   : %10x\n", elen);
+	_printf("Actual     : %10x\n", alen);
+	printf("Expected   : %10x\n", z);
+	_printf("Actual     : %10x\n", z);
+	printf("Expected   : %10x\n", LONG_MAX);
+	_printf("Actual     : %10x\n", LONG_MAX);
+	printf("Expected   : %10x\n", LONG_MIN);
+	_printf("Actual     : %10x\n", LONG_MIN);
+
 
 /*
 	printf("=====================\n");

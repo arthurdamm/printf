@@ -36,7 +36,7 @@ int print_int(va_list ap, params_t *params)
 		n += _putchar('+');
 	else if (params->space_flag && l >= 0)
 		n += _putchar(' ');
-	return (n += _puts(add_width(convert(l, 10, 0), params)));
+	return (n += _puts(add_width(convert(l, 10, 0, params), params)));
 }
 
 /**
@@ -50,11 +50,10 @@ int print_string(va_list ap, params_t *params)
 {
 	char *str = va_arg(ap, char *);
 
-	(void)params;
 	switch ((int)(!str))
 		case 1:
 			str = NULL_STRING;
-
+	str = _str_copy_from_back(params->buf, str);
 	return (_puts(str));
 }
 
@@ -94,7 +93,7 @@ int print_S(va_list ap, params_t *params)
 		{
 			sum += _putchar('\\');
 			sum += _putchar('x');
-			hex = convert(*str, 16, 0);
+			hex = convert(*str, 16, 0, params);
 			if (!hex[1])
 				sum += _putchar('0');
 			sum += _puts(hex);

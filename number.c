@@ -36,14 +36,15 @@ int print_number(long n, int is_unsigned)
  * @num: number
  * @base: base
  * @flags: argument flags
+ * @params: paramater struct
+ *
  * Return: string
  */
-char *convert(long int num, int base, int flags)
+char *convert(long int num, int base, int flags, params_t *params)
 {
 	static char *array;
-	static char buffer[FIELD_BUF_SIZE];
 	char sign = 0;
-	char *ptr;
+	char *ptr = params->buf;
 	unsigned long n = num;
 
 	if (!(flags & CONVERT_UNSIGNED) && num < 0)
@@ -53,9 +54,8 @@ char *convert(long int num, int base, int flags)
 
 	}
 	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
-	ptr = &buffer[FIELD_BUF_SIZE - 1];
-	*ptr = '\0';
 
+	ptr++;
 	do	{
 		*--ptr = array[n % base];
 		n /= base;
@@ -63,7 +63,7 @@ char *convert(long int num, int base, int flags)
 
 	if (sign)
 		*--ptr = sign;
-	return (ptr);
+	return (params->buf = ptr);
 }
 
 /**
@@ -105,6 +105,6 @@ int print_address(va_list ap, params_t *params)
 		return (_puts("(nil)"));
 	c += _putchar('0');
 	c += _putchar('x');
-	c += _puts(convert(n, 16, 1));
+	c += _puts(convert(n, 16, 1, params));
 	return (c);
 }

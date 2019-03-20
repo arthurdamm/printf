@@ -16,13 +16,16 @@
 
 #define NULL_STRING "(null)"
 
-#define PARAMS_INIT {0, 0, 0, 0, 0, 0}
+#define PARAMS_INIT {0, 0, 0, 0, 0, 0, 0, 0}
 
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
 
 /**
  * struct parameters - parameters struct
+ *
+ * @buf: current pointer to field buffer
+ * @buf_start: start of field buffer
  *
  * @plus_flag: on if plus_flag specified
  * @space_flag: on if hashtag_flag specified
@@ -35,6 +38,9 @@
  */
 typedef struct parameters
 {
+	char *buf;
+	char *buf_start;
+
 	unsigned int plus_flag		: 1;
 	unsigned int space_flag		: 1;
 	unsigned int hashtag_flag	: 1;
@@ -70,7 +76,7 @@ int print_S(va_list ap, params_t *params);
 
 /* number.c module */
 int print_number(long n, int is_unsigned);
-char *convert(long int num, int base, int flags);
+char *convert(long int num, int base, int flags, params_t *params);
 int print_unsigned(va_list ap, params_t *params);
 int print_address(va_list ap, params_t *params);
 
@@ -94,9 +100,11 @@ int print_rot13(va_list ap, params_t *params);
 
 /* atoi.c module */
 int _isdigit(int c);
+int _strlen(char *s);
+char *_str_copy_from_back(char *dest, char *src);
 
 /* params.c module */
-void clear_params(params_t *params);
+void init_params_and_buf(params_t *params, char *buf);
 
 /* string_malloc.c module */
 char *str_concat(char *s1, char *s2);

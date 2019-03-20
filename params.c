@@ -1,12 +1,13 @@
 #include "holberton.h"
 
 /**
- * clear_params - clears struct fields
+ * init_params_and_buf - clears struct fields and reset buf
  * @params: the parameters struct
+ * @buf: the buffer
  *
  * Return: void
  */
-void clear_params(params_t *params)
+void init_params_and_buf(params_t *params, char *buf)
 {
 	params->plus_flag = 0;
 	params->space_flag = 0;
@@ -16,4 +17,9 @@ void clear_params(params_t *params)
 
 	params->h_modifier = 0;
 	params->l_modifier = 0;
+
+	buf[FIELD_BUF_SIZE - 1] = '\0';
+	buf[FIELD_BUF_SIZE - 2] = '\0';
+	params->buf_start = buf;
+	params->buf = &buf[FIELD_BUF_SIZE - 2];
 }

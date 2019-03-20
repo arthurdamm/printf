@@ -20,8 +20,10 @@ int main(void)
 	printf("=====================\n");
 	printf("*****u!*****\n");
 	printf("=====================\n");
-	elen = printf("Expected!   : %ld\n", (long)-200);
-	alen = _printf("Actual!     : %ld\n", (long)-200);
+	elen = printf("Expected!   : [%+]\n");
+	alen = _printf("Actual!     : [%+]\n");
+	elen = printf("Expected!   : [% ]\n");
+	alen = _printf("Actual!     : [% ]\n");
 	printf("Expected   : %ld\n", elen);
 	_printf("Actual     : %ld\n", alen);
 	elen = printf("Expected   : %ld\n", n);

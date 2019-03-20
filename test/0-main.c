@@ -7,15 +7,16 @@
  */
 int main(void)
 {
-	int elen, alen;
-	_printf("%%%%%++  +#   ##    d\n", "abc");
-	 printf("%%%%%++  +#   ##    d\n", "abc");
 
-	elen = printf("Expected   : % % %d\n", 3);
-	alen = _printf("Actual     : % % %d\n", 3);
-	printf("Expected   : %i\n", elen);
-	_printf("Actual     : %i\n", alen);
+	printf("[%s]\n", "hello");
+	_printf("[%s]\n", "hello");
 
+	printf("[%s]\n", "");
+	_printf("[%s]\n", "");
 
+/*
+	printf("[%d]\n", printf(" : % % % %% %%% %%%% %%%d\n", 9));
+	printf("[%d]\n", _printf(" : % % % %% %%% %%%% %%%d\n", 9));
+*/
 	return (0);
 }

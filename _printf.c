@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	int sum = 0;
 	va_list ap;
-	char *p, *start;
+	char *p, *start, buf[FIELD_BUF_SIZE];
 	params_t params = PARAMS_INIT;
 
 	va_start(ap, format);
@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 		return (-1);
 	for (p = (char *)format; *p; p++)
 	{
-		clear_params(&params);
+		init_params_and_buf(&params, buf);
 		if (*p != '%')
 		{
 			sum += _putchar(*p);

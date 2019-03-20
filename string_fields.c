@@ -9,6 +9,15 @@
  */
 char *add_width(char *p, params_t *params)
 {
-	(void)params;
+	static int r;
+	unsigned int i = _strlen(p);
+
+	if (!r)
+	{
+		r = 1;
+		/* _printf("l:[%d] w:[%d]", i, params->width); */
+	}
+	while (i++ < params->width)
+		*--p = ' ';
 	return (p);
 }
