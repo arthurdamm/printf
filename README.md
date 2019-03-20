@@ -142,6 +142,9 @@ Now you will have `printf.a` static library, and all you have to do is compile y
 gcc your_C_source_code -L. -lprintf
 ```
 
+*****************************************************************************************************
+
+
 ## Examples
 ```
 farrukh@ubuntu:~/printf$ cat main.c
