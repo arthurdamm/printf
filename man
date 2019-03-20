@@ -51,7 +51,7 @@ This is simple clone of _printf function with basic functionality, but we are ad
 
 .B 
 .SH SEE ALSO
-.I peerlearning(2), projectbased(2), fullstack(2), Betty(1)
+.I printf(1), asprintf(3), dprintf(3), scanf(3), setlocale(3), wcrtomb(3), wprintf(3), locale(5)
 .SH BUGS
 .B '-', '+', ' '(space)
 flags work almost flawlessly, but still we are having issues
