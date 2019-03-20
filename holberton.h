@@ -77,6 +77,7 @@ int print_S(va_list ap, params_t *params);
 /* number.c module */
 int print_number(long n, int is_unsigned);
 char *convert(long int num, int base, int flags, params_t *params);
+char *convert_2(unsigned long int num, int base, short l);
 int print_unsigned(va_list ap, params_t *params);
 int print_address(va_list ap, params_t *params);
 
