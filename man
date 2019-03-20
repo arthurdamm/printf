@@ -20,6 +20,33 @@ This is simple clone of _printf function with basic functionality, but we are ad
 .B %s
 - prints a string
 .br
+.B %b
+- prints a binary, custom specifier
+.br
+.B %o
+- Prints an octal number
+.br
+.B  %x
+- Prints a hexadecimal number
+.br
+.B %X
+- prints a hexadecimal in uppercase
+.br
+.B %u
+- prints a character
+.br
+.B %S
+- Prints a %
+.br
+.B  %p
+- Prints an address
+.br
+.B %r
+- prints a string in reverse
+.br
+B %R
+- prints a string in rot13
+.br
 
 
 .B 
