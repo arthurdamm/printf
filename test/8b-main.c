@@ -264,6 +264,10 @@ int main(void)
 	_printf("Actual     : %+# s\n", str);
 	printf("=====================\n");
 
+	elen = printf("Expected   : % % % d\n", INT_MAX);
+	alen = _printf("Actual     : % % % d\n", INT_MAX);
+	printf("Expected   : %i\n", elen);
+	_printf("Actual     : %i\n", alen);
 	(void)elen;
 	(void)alen;
 }
