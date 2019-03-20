@@ -17,8 +17,5 @@ void init_params_and_buf(params_t *params, char *buf)
 
 	params->h_modifier = 0;
 	params->l_modifier = 0;
-
-	buf[FIELD_BUF_SIZE - 1] = '\0';
-	params->buf_start = buf;
-	params->buf = &buf[FIELD_BUF_SIZE - 2];
+	(void)buf;
 }
