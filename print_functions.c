@@ -84,7 +84,6 @@ int print_S(va_list ap, params_t *params)
 	char *hex;
 	int sum = 0;
 
-	(void)params;
 	if ((int)(!str))
 		return (_puts(NULL_STRING));
 	for (; *str; str++)
