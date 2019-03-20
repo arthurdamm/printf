@@ -59,7 +59,14 @@ This is simple clone of _printf function with basic functionality, but we are ad
 .B ' '(space)
 A blank should be left before a positive number (or empty string) produced by a signed conversion.
 
+.SH The length modifier
+.B h
 
+A following integer conversion corresponds to a short int or unsigned short int argument, or a following n conversion corresponds to a pointer to a short int argument.
+
+.B l
+
+(ell) A following integer conversion corresponds to a long int or unsigned long int argument, or a following n conversion corresponds to a pointer to a long int argument, or a following c conversion corresponds to a wint_t argument, or a following s conversion corresponds to a pointer to wchar_t argument.
 
 
 .B 
