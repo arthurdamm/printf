@@ -1,7 +1,6 @@
-.TH man 1 "16 March 2019" "0.1" "Custom _printf function"
+.TH man 1 "16 March 2019" "1.3" "Custom _printf function"
 .SH NAME
-.B _printf - an implementation of printf function
-- 
+.B _printf - an implementation of printf function 
 .SH SYNOPSIS
 .B _printf() 
 - is a Holberton school group project. The task is to write a custom version of printf() from standard library.
