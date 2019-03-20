@@ -1,4 +1,4 @@
-.TH man 1 "16 March 2019" "0.1" "custom _printf function"
+.TH man 1 "16 March 2019" "0.1" "Custom _printf function"
 .SH NAME
 .B _printf - an implementation of printf function
 - 
@@ -6,10 +6,23 @@
 .B _printf() 
 - is a Holberton school group project. The task is to write a custom version of printf() from standard library.
 .SH DESCRIPTION
-Holberton School is a project-based alternative to college for the next generation of software engineers.
+This is simple clone of _printf function with basic functionality, but we are adding support for more specifiers, length modifiers and precision
 .SH OPTIONS
-.B holberton
-does not take any options. However, you can supply studentname.
+.B %c
+- prints a character
+.br
+.B %%
+- Prints a %
+.br
+.B  %d & %i
+- Prints an integer
+.br
+.B %s
+- prints a string
+.br
+
+
+.B 
 .SH SEE ALSO
 .I peerlearning(2), projectbased(2), fullstack(2), Betty(1)
 .SH BUGS
