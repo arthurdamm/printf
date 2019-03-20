@@ -1,37 +1,6 @@
 #include "holberton.h"
 
 /**
- * print_number - using only _putchar
- * @n: the integer to print
- * @is_unsigned: flag if unsigned
- *
- * Return: bytes printed
- */
-int print_number(long n, int is_unsigned)
-{
-	int p, c = 0;
-	unsigned long i = 10000000000000000000UL;
-
-	if (!is_unsigned && n < 0)
-	{
-		c += _putchar('-');
-		n = -n;
-	}
-	for (p = 0; i > 0; i /= 10)
-	{
-		unsigned int d = (n / i) % 10;
-
-		if (d || p || i == 1)
-		{
-			c += _putchar(d + '0');
-			p++;
-		}
-
-	}
-	return (c);
-}
-
-/**
  * convert - converter function, a clone of itoa
  * @num: number
  * @base: base
@@ -86,7 +55,7 @@ int print_unsigned(va_list ap, params_t *params)
 		l = (unsigned short int)va_arg(ap, unsigned int);
 	else
 		l = (unsigned int)va_arg(ap, unsigned int);
-	return (print_number(l, 1));
+	return (_puts(add_width(convert(l, 10, CONVERT_UNSIGNED, params), params)));
 }
 
 

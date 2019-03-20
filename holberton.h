@@ -76,9 +76,7 @@ int print_percent(va_list ap, params_t *params);
 int print_S(va_list ap, params_t *params);
 
 /* number.c module */
-int print_number(long n, int is_unsigned);
 char *convert(long int num, int base, int flags, params_t *params);
-char *convert_2(unsigned long int num, int base, short l);
 int print_unsigned(va_list ap, params_t *params);
 int print_address(va_list ap, params_t *params);
 
@@ -103,7 +101,6 @@ int print_rot13(va_list ap, params_t *params);
 /* atoi.c module */
 int _isdigit(int c);
 int _strlen(char *s);
-char *_str_copy_from_back(char *dest, char *src);
 
 /* params.c module */
 void init_params(params_t *params, va_list ap);
