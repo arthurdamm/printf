@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	int sum = 0;
 	va_list ap;
-	char *p, *start, buf[FIELD_BUF_SIZE];
+	char *p, *start, *except;
 	params_t params = PARAMS_INIT;
 
 	va_start(ap, format);
@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 		return (-1);
 	for (p = (char *)format; *p; p++)
 	{
-		init_params_and_buf(&params, buf);
+		init_params(&params);
 		if (*p != '%')
 		{
 			sum += _putchar(*p);
@@ -38,9 +38,8 @@ int _printf(const char *format, ...)
 			p++;
 		if (!get_specifier(p))
 		{
-			if (params.l_modifier || params.h_modifier)
-				p--;
-			sum += print_from_to(start, p);
+			except = params.l_modifier || params.h_modifier ? p - 1 : 0;
+			sum += print_from_to(start, p, except);
 		}
 		else
 			sum += get_print_func(p, ap, &params);

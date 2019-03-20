@@ -95,7 +95,7 @@ int print_binary(va_list ap, params_t *params);
 int print_octal(va_list ap, params_t *params);
 
 /* simple_printers.c module */
-int print_from_to(char *start, char *stop);
+int print_from_to(char *start, char *stop, char *except);
 int print_rev(va_list ap, params_t *params);
 int print_rot13(va_list ap, params_t *params);
 
@@ -105,7 +105,7 @@ int _strlen(char *s);
 char *_str_copy_from_back(char *dest, char *src);
 
 /* params.c module */
-void init_params_and_buf(params_t *params, char *buf);
+void init_params(params_t *params);
 
 /* string_malloc.c module */
 char *str_concat(char *s1, char *s2);

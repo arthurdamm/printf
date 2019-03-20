@@ -3,11 +3,10 @@
 /**
  * init_params_and_buf - clears struct fields and reset buf
  * @params: the parameters struct
- * @buf: the buffer
  *
  * Return: void
  */
-void init_params_and_buf(params_t *params, char *buf)
+void init_params(params_t *params)
 {
 	params->plus_flag = 0;
 	params->space_flag = 0;
@@ -17,5 +16,4 @@ void init_params_and_buf(params_t *params, char *buf)
 
 	params->h_modifier = 0;
 	params->l_modifier = 0;
-	(void)buf;
 }
