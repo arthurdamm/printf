@@ -14,7 +14,7 @@ int print_char(va_list ap, params_t *params)
 
 	while (pad++ < params->width)
 		sum += _putchar(pad_char);
-	return (_putchar(va_arg(ap, int)));
+	return (sum += _putchar(va_arg(ap, int)));
 }
 
 /**
