@@ -81,6 +81,7 @@ Function name | Description | Format Specifier
 `print_S` | Prints string, prints hex value of non visible characters | `%S`
 `print_address` | Prints a pointer | `%p`
 `print_rev` | Prints string in reverse, custom specifier | `%r`
+`print_rot13` | Prints string in rot13, custom specifier | `%R`
 
 
 *******************************************************************************
