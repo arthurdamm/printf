@@ -45,9 +45,9 @@ char *_str_copy_from_back(char *dest, char *src)
 	if (i)
 	{
 		c = 1;
-		src--;
+		dest++;
 	}
-	while (i--)
+	while (i-- >= 0)
 		*dest-- = *src--;
 	if (c)
 		dest++;
