@@ -12,7 +12,10 @@ char *add_width(char *p, params_t *params)
 	static int r;
 	unsigned int i = _strlen(p);
 	char pad_char = ' ';
+	int neg = (*p == '-');
 
+	if (neg)
+		p++;
 	if (params->zero_flag && !params->minus_flag)
 		pad_char = '0';
 	if (!r)
@@ -22,5 +25,7 @@ char *add_width(char *p, params_t *params)
 	}
 	while (i++ < params->width)
 		*--p = pad_char;
+	if (neg)
+		*--p = '-';
 	return (p);
 }
