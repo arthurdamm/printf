@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * init_params_and_buf - clears struct fields and reset buf
+ * init_params - clears struct fields and reset buf
  * @params: the parameters struct
  *
  * Return: void

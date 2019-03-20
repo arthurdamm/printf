@@ -4,6 +4,7 @@
  * print_from_to - prints a range of char addresses
  * @start: starting address
  * @stop: stopping address
+ * @except: except address
  *
  * Return: number bytes printed
  */
