@@ -80,7 +80,7 @@ Function name | Description | Format Specifier
 `print_unsigned` | Prints unsigned integer | `%u`
 `print_S` | Prints string, prints hex value of non visible characters | `%S`
 `print_address` | Prints a pointer | `%p`
-`print_rev` | Prints string in reverse, custom specifier | `%S`
+`print_rev` | Prints string in reverse, custom specifier | `%r`
 
 
 *******************************************************************************
