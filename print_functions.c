@@ -62,7 +62,7 @@ int print_string(va_list ap, params_t *params)
 	pad = _strlen(str);
 	while (pad++ < params->width)
 		sum += _putchar(pad_char);
-	return (_puts(str));
+	return (sum += _puts(str));
 }
 
 /**
