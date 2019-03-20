@@ -14,10 +14,12 @@ char *add_width(char *p, params_t *params)
 	char pad_char = ' ';
 	int neg = (*p == '-');
 
-	if (neg)
-		p++;
 	if (params->zero_flag && !params->minus_flag)
 		pad_char = '0';
+	if (neg && i < params->width && pad_char == '0')
+		p++;
+	else
+		neg = 0;
 	if (!r)
 	{
 		r = 1;
