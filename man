@@ -44,7 +44,7 @@ This is simple clone of _printf function with basic functionality, but we are ad
 .B %r
 - prints a string in reverse
 .br
-B %R
+.B %R
 - prints a string in rot13
 .br
 
