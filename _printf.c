@@ -37,7 +37,11 @@ int _printf(const char *format, ...)
 		if (get_modifier(p, &params))
 			p++;
 		if (!get_specifier(p))
+		{
+			if (params.l_modifier || params.h_modifier)
+				p--;
 			sum += print_from_to(start, p);
+		}
 		else
 			sum += get_print_func(p, ap, &params);
 	}
