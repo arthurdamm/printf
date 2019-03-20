@@ -9,7 +9,11 @@
  */
 int print_char(va_list ap, params_t *params)
 {
-	(void)params;
+	char pad_char = ' ';
+	unsigned int pad = 1, sum = 0;
+
+	while (pad++ < params->width)
+		sum += _putchar(pad_char);
 	return (_putchar(va_arg(ap, int)));
 }
 
@@ -48,12 +52,16 @@ int print_int(va_list ap, params_t *params)
  */
 int print_string(va_list ap, params_t *params)
 {
-	char *str = va_arg(ap, char *);
+	char *str = va_arg(ap, char *), pad_char = ' ';
+	unsigned int pad = 0, sum = 0;
 
 	(void)params;
 	switch ((int)(!str))
 		case 1:
 			str = NULL_STRING;
+	pad = _strlen(str);
+	while (pad++ < params->width)
+		sum += _putchar(pad_char);
 	return (_puts(str));
 }
 

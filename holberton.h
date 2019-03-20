@@ -35,6 +35,7 @@
  *
  * @h_modifier: on if h_modifier is specified
  * @l_modifier: on if l_modifier is specified
+ *
  */
 typedef struct parameters
 {
@@ -86,7 +87,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params);
 int get_print_func(char *s, va_list ap, params_t *params);
 int get_flag(char *s, params_t *params);
 int get_modifier(char *s, params_t *params);
-char *get_width(char *s, params_t *params);
+char *get_width(char *s, params_t *params, va_list ap);
 
 /* convert_number.c module */
 int print_hex(va_list ap, params_t *params);
@@ -105,7 +106,7 @@ int _strlen(char *s);
 char *_str_copy_from_back(char *dest, char *src);
 
 /* params.c module */
-void init_params(params_t *params);
+void init_params(params_t *params, va_list ap);
 
 /* string_malloc.c module */
 char *str_concat(char *s1, char *s2);
