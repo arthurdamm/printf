@@ -39,7 +39,7 @@ int print_number(char *str, params_t *params)
 	int neg = (!params->unsign && *str == '-');
 
 	if (!params->precision && *str == '0' && !str[1])
-		return (0);
+		str = "";
 	if (neg)
 	{
 		str++;
