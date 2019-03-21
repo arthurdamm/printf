@@ -71,13 +71,13 @@ int print_unsigned(va_list ap, params_t *params)
 int print_address(va_list ap, params_t *params)
 {
 	unsigned long int n = va_arg(ap, unsigned long int);
-	int c = 0;
+	char *str;
 
 	if (!n)
 		return (_puts("(nil)"));
-	c += _putchar('0');
-	c += _putchar('x');
 
-	c += _puts(convert(n, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, params));
-	return (c);
+	str = convert(n, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, params);
+	*--str = 'x';
+	*--str = '0';
+	return (print_number(str, params));
 }
