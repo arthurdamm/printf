@@ -14,7 +14,8 @@ int print_char(va_list ap, params_t *params)
 
 	while (pad++ < params->width)
 		sum += _putchar(pad_char);
-	return (sum += _putchar(va_arg(ap, int)));
+	sum += _putchar(va_arg(ap, int));
+	return (sum);
 }
 
 /**
@@ -26,7 +27,6 @@ int print_char(va_list ap, params_t *params)
  */
 int print_int(va_list ap, params_t *params)
 {
-	int n = 0;
 	long l;
 
 	if (params->l_modifier)
@@ -35,12 +35,7 @@ int print_int(va_list ap, params_t *params)
 		l = (short int)va_arg(ap, int);
 	else
 		l = (int)va_arg(ap, int);
-
-	if (params->plus_flag && l >= 0)
-		n += _putchar('+');
-	else if (params->space_flag && l >= 0)
-		n += _putchar(' ');
-	return (n += _puts(add_width(convert(l, 10, 0, params), params)));
+	return (print_number(convert(l, 10, 0, params), params));
 }
 
 /**

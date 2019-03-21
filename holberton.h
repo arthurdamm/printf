@@ -14,7 +14,7 @@
 
 #define NULL_STRING "(null)"
 
-#define PARAMS_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#define PARAMS_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0}
 
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
@@ -22,8 +22,7 @@
 /**
  * struct parameters - parameters struct
  *
- * @buf: current pointer to field buffer
- * @buf_start: start of field buffer
+ * @unsign: flag if unsigned value
  *
  * @plus_flag: on if plus_flag specified
  * @space_flag: on if hashtag_flag specified
@@ -39,8 +38,7 @@
  */
 typedef struct parameters
 {
-	char *buf;
-	char *buf_start;
+	unsigned int unsign			: 1;
 
 	unsigned int plus_flag		: 1;
 	unsigned int space_flag		: 1;
@@ -103,6 +101,9 @@ int print_rot13(va_list ap, params_t *params);
 /* atoi.c module */
 int _isdigit(int c);
 int _strlen(char *s);
+int print_number(char *str, params_t *params);
+int print_number_right_shift(char *str, params_t *params);
+int print_number_left_shift(char *str, params_t *params);
 
 /* params.c module */
 void init_params(params_t *params, va_list ap);
