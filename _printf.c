@@ -34,6 +34,7 @@ int _printf(const char *format, ...)
 			p++; /* next char */
 		}
 		p = get_width(p, &params, ap);
+		p = get_precision(p, &params, ap);
 		if (get_modifier(p, &params))
 			p++;
 		if (!get_specifier(p))

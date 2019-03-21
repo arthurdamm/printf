@@ -14,7 +14,7 @@
 
 #define NULL_STRING "(null)"
 
-#define PARAMS_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0}
+#define PARAMS_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
@@ -31,6 +31,7 @@
  * @minus_flag: on if _flag specified
  *
  * @width: field width specified
+ * @precision: field precision specified
  *
  * @h_modifier: on if h_modifier is specified
  * @l_modifier: on if l_modifier is specified
@@ -47,6 +48,7 @@ typedef struct parameters
 	unsigned int minus_flag		: 1;
 
 	unsigned int width;
+	unsigned int precision;
 
 	unsigned int h_modifier		: 1;
 	unsigned int l_modifier		: 1;
@@ -113,6 +115,7 @@ char *str_concat(char *s1, char *s2);
 
 /* string_fields.c modoule */
 char *add_width(char *p, params_t *params);
+char *get_precision(char *p, params_t *params, va_list ap);
 
 /* _prinf.c module */
 int _printf(const char *format, ...);
