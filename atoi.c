@@ -37,7 +37,7 @@ int print_number(char *str, params_t *params)
 {
 	unsigned int i = _strlen(str);
 	int neg = (!params->unsign && *str == '-');
-puts("PR");
+
 	if (!params->precision && *str == '0' && !str[1])
 		return (0);
 	if (neg)
@@ -69,7 +69,6 @@ int print_number_right_shift(char *str, params_t *params)
 	unsigned int n = 0, neg, neg2, i = _strlen(str);
 	char pad_char = ' ';
 
-puts("f1");
 	if (params->zero_flag && !params->minus_flag)
 		pad_char = '0';
 	neg = neg2 = (!params->unsign && *str == '-');
@@ -108,7 +107,6 @@ int print_number_left_shift(char *str, params_t *params)
 	unsigned int n = 0, neg, neg2, i = _strlen(str);
 	char pad_char = ' ';
 
-puts("f1");
 	if (params->zero_flag && !params->minus_flag)
 		pad_char = '0';
 	neg = neg2 = (!params->unsign && *str == '-');
