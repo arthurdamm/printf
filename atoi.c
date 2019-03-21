@@ -35,6 +35,18 @@ int _strlen(char *s)
  */
 int print_number(char *str, params_t *params)
 {
+	unsigned int i = _strlen(str);
+	int neg = (!params->unsign && *str == '-');
+
+	if (neg)
+	{
+		str++;
+		i--;
+	}
+	while (i++ < params->precision)
+		*--str = '0';
+	if (neg)
+		*--str = '-';
 	if (!params->minus_flag)
 		return (print_number_right_shift(str, params));
 	else
