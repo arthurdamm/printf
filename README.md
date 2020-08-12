@@ -3,10 +3,10 @@
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/narnat/printf)
 
 ## Authors
-[Arthur Damm](https://github.com/arthurdamm) [LinkedIn](https://www.linkedin.com/in/arthur-damm-96527042/) [@arthurdamm](https://twitter.com/arthurdamm)
+- [Arthur Damm](https://github.com/arthurdamm) ~ [LinkedIn](https://www.linkedin.com/in/arthur-damm-96527042/) ~ [@arthurdamm](https://twitter.com/arthurdamm)
 *Sharpening my skills at Holberton School of Software Engineering. I have a lifelong passion for programming with a background in mathematics. Spent the last several years enjoying working as a private tutor and am now excited to practice software wizardry professionally.*
 
-[Farrukh Akhrarov](https://github.com/narnat)
+- [Farrukh Akhrarov](https://github.com/narnat)
 
 
 ## Overview
