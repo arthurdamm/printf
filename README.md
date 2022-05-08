@@ -147,7 +147,7 @@ gcc your_C_source_code -L. -lprintf
 
 ## Examples
 ```
-farrukh@ubuntu:~/printf$ cat main.c
+arthur@ubuntu:~/printf$ cat main.c
 #include <limits.h>
 #include <stdio.h>
 #include "holberton.h"
@@ -192,8 +192,8 @@ int main(void)
     printf("Unknown:[%r]\n");
     return (0);
 }
-farrukh@ubuntu:~/printf$ gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c
-farrukh@ubuntu:~/printf$ ./printf
+arthur@ubuntu:~/printf$ gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c
+arthur@ubuntu:~/printf$ ./printf
 Let's try to printf a simple sentence.
 Let's try to printf a simple sentence.
 Length:[39, 39]
@@ -218,13 +218,12 @@ Len:[12]
 Len:[12]
 Unknown:[%r]
 Unknown:[%r]
-farrukh@ubuntu:~/printf$
+arthur@ubuntu:~/printf$
 ```
 
 *****************************************************************************************************
 
 ## Authors
-- [Farrukh Akhrarov](https://github.com/narnat)
 - [Arthur Damm](https://github.com/arthurdamm/twodoor) ~ [LinkedIn](https://www.linkedin.com/in/arthur-damm-96527042/) ~ [@arthurdamm](https://twitter.com/arthurdamm):
 *Sharpening my skills at Holberton School of Software Engineering. I have a lifelong passion for programming with a background in mathematics and a daily meditation practice. Spent the last several
 years enjoying working as a private tutor and am now excited to practice software wizardry professionally.*
